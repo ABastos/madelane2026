@@ -579,7 +579,7 @@
         <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--ash); margin-bottom:1.5rem;">Step 3 of 3 — CV Upload</div>
 
         <div class="mfg">
-          <label class="mfl">Upload Your CV <span style="color:var(--gold);">*</span></label>
+          <label class="mfl">Upload Your CV <span style="color:var(--ash); font-size:0.75em;">(optional)</span></label>
           <div style="font-size:0.73rem; color:var(--ash); margin-bottom:0.75rem; line-height:1.6;">Please upload a current CV or résumé. Accepted formats: PDF, DOC, DOCX. Maximum file size: 5 MB.</div>
 
           <!-- Drop Zone -->
@@ -744,7 +744,6 @@
 
   function submitApp() {
     const cv = selectedCVFile || document.getElementById('cvInput').files[0];
-    if (!cv) { alert('Please upload your CV before submitting.'); return; }
     const btn = document.getElementById('submitBtn');
     btn.textContent = 'Submitting…';
     btn.disabled = true;
