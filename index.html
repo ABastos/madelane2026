@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MaDeLaNe 2026 – Multi-Area, High-Density, Laminar Neurophysiology Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --gold:     #c8a951;
+      --gold-dk:  #a88c38;
+      --gold-lt:  #e8d18a;
+      --black:    #1a1a1a;
+      --charcoal: #2d2d2d;
+      --stone:    #4a4a4a;
+      --ash:      #6e6e6e;
+      --silver:   #c4c4c4;
+      --cloud:    #f0eeea;
+      --white:    #ffffff;
+      --border:   #d8d4cc;
+      --section-bg: #f7f5f1;
+      --serif:   'Crimson Pro', Georgia, serif;
+      --sans:    'Libre Franklin', 'Helvetica Neue', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--black); font-family: var(--sans); font-weight: 400; line-height: 1.65; overflow-x: hidden; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(26,26,26,0.96); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 60px; border-bottom: 2px solid var(--gold); }
+    .nav-brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+    .nav-brand-mark { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--gold); letter-spacing: 0.03em; }
+    .nav-divider { width: 1px; height: 20px; background: rgba(200,169,81,0.4); }
+    .nav-brand-sub { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.72); text-decoration: none; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0.8rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta-link { background: var(--gold) !important; color: var(--black) !important; font-weight: 700 !important; padding: 0.45rem 1.1rem !important; }
+    .nav-cta-link:hover { background: var(--gold-lt) !important; color: var(--black) !important; }
+
+    /* HERO */
+    .hero { position: relative; height: 100vh; min-height: 640px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(155deg, #0a0a0a 0%, #1c160a 40%, #221a0c 60%, #1a1a1a 100%); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 900px 700px at 68% 28%, rgba(200,169,81,0.13) 0%, transparent 70%), radial-gradient(ellipse 350px 350px at 85% 65%, rgba(200,169,81,0.06) 0%, transparent 65%); }
+    .hero-network { position: absolute; inset: 0; opacity: 0.06; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Ccircle cx='60' cy='90' r='3.5' fill='%23c8a951'/%3E%3Ccircle cx='180' cy='45' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='310' cy='110' r='3' fill='%23c8a951'/%3E%3Ccircle cx='420' cy='60' r='2' fill='%23c8a951'/%3E%3Ccircle cx='110' cy='220' r='3' fill='%23c8a951'/%3E%3Ccircle cx='260' cy='195' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='370' cy='240' r='3' fill='%23c8a951'/%3E%3Ccircle cx='80' cy='350' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='210' cy='390' r='3' fill='%23c8a951'/%3E%3Ccircle cx='450' cy='340' r='2' fill='%23c8a951'/%3E%3Ccircle cx='340' cy='430' r='2.5' fill='%23c8a951'/%3E%3Cline x1='60' y1='90' x2='180' y2='45' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='180' y1='45' x2='310' y2='110' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='310' y1='110' x2='420' y2='60' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='60' y1='90' x2='110' y2='220' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='180' y1='45' x2='260' y2='195' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='310' y1='110' x2='370' y2='240' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='110' y1='220' x2='260' y2='195' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='260' y1='195' x2='370' y2='240' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='110' y1='220' x2='80' y2='350' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='260' y1='195' x2='210' y2='390' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='370' y1='240' x2='450' y2='340' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='80' y1='350' x2='210' y2='390' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='210' y1='390' x2='340' y2='430' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='450' y1='340' x2='340' y2='430' stroke='%23c8a951' stroke-width='0.6'/%3E%3C/svg%3E"); background-size: 500px 500px; }
+    .hero-gradient { position: absolute; bottom: 0; left: 0; right: 0; height: 72%; background: linear-gradient(to top, rgba(8,8,8,0.93) 0%, rgba(8,8,8,0.55) 55%, transparent 100%); }
+    .hero-content { position: relative; z-index: 10; padding: 0 5rem 5rem; max-width: 860px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.67rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; opacity: 0; animation: fadeUp 0.9s 0.3s ease forwards; }
+    .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
+    .hero-title { font-family: var(--serif); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.06; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.4rem; opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards; }
+    .hero-title em { font-style: italic; color: var(--gold-lt); }
+    .hero-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 500px; line-height: 1.8; margin-bottom: 2.25rem; opacity: 0; animation: fadeUp 0.9s 0.65s ease forwards; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.9s 0.78s ease forwards; }
+    .pill { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(200,169,81,0.28); color: rgba(255,255,255,0.78); padding: 0.32rem 0.8rem; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; backdrop-filter: blur(4px); }
+    .pill-icon { color: var(--gold); }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s 0.92s ease forwards; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+    /* BUTTONS */
+    .btn { display: inline-block; text-decoration: none; font-family: var(--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.85rem 2.2rem; cursor: pointer; border: none; transition: all 0.2s; }
+    .btn-gold { background: var(--gold); color: var(--black); }
+    .btn-gold:hover { background: var(--gold-lt); }
+    .btn-outline-white { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.38); }
+    .btn-outline-white:hover { border-color: var(--white); }
+    .btn-outline-dark { background: transparent; color: var(--black); border: 1px solid var(--charcoal); }
+    .btn-outline-dark:hover { background: var(--black); color: var(--white); }
+
+    /* GOLD RULE */
+    .gold-rule { width: 100%; height: 3px; background: linear-gradient(90deg, var(--gold-dk), var(--gold-lt), var(--gold-dk)); }
+    .gold-rule-subtle { width: 100%; height: 1px; background: var(--border); }
+
+    /* SECTION */
+    .section { max-width: 1160px; margin: 0 auto; padding: 5.5rem 3rem; }
+    .section-label { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: 0.7rem; display: flex; align-items: center; gap: 0.6rem; }
+    .section-label::before { content: ''; display: inline-block; width: 18px; height: 1px; background: var(--gold); }
+    .section-heading { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; letter-spacing: -0.01em; color: var(--black); margin-bottom: 1.2rem; }
+    .section-heading em { font-style: italic; color: var(--stone); }
+    .section-intro { font-size: 1.02rem; font-weight: 300; color: var(--stone); max-width: 680px; line-height: 1.8; }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3.5rem; align-items: start; }
+    .about-body p { font-size: 0.93rem; color: var(--charcoal); line-height: 1.88; margin-bottom: 1.1rem; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .stat-cell { background: var(--white); padding: 1.7rem 1.4rem; text-align: center; transition: background 0.2s; }
+    .stat-cell:hover { background: var(--section-bg); }
+    .stat-number { font-family: var(--serif); font-size: 2.7rem; font-weight: 300; color: var(--gold-dk); line-height: 1; margin-bottom: 0.35rem; }
+    .stat-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); }
+
+    /* TOPICS */
+    #topics { background: var(--section-bg); }
+    .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+    .topic-card { background: var(--white); padding: 2rem 1.75rem; border-bottom: 3px solid transparent; transition: background 0.2s, border-color 0.2s; }
+    .topic-card:hover { background: var(--cloud); border-bottom-color: var(--gold); }
+    .topic-num { font-family: var(--serif); font-size: 2.4rem; font-weight: 300; color: var(--border); line-height: 1; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .topic-card:hover .topic-num { color: var(--gold-lt); }
+    .topic-name { font-size: 0.88rem; font-weight: 600; color: var(--black); margin-bottom: 0.55rem; }
+    .topic-desc { font-size: 0.8rem; color: var(--ash); line-height: 1.7; }
+
+    /* SCHEDULE */
+    #schedule { background: var(--charcoal); }
+    #schedule .section-heading { color: var(--white); }
+    #schedule .section-intro { color: rgba(255,255,255,0.5); }
+    #schedule .section-label { color: var(--gold); }
+    #schedule .section-label::before { background: var(--gold); }
+    .schedule-tabs { display: flex; border-bottom: 1px solid rgba(255,255,255,0.13); margin: 2.5rem 0 2rem; overflow-x: auto; }
+    .tab-btn { background: transparent; border: none; border-bottom: 3px solid transparent; margin-bottom: -1px; padding: 0.85rem 1.5rem; color: rgba(255,255,255,0.45); font-family: var(--sans); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: color 0.2s, border-color 0.2s; white-space: nowrap; }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .tab-btn:not(.active):hover { color: rgba(255,255,255,0.78); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .day-header { display: flex; align-items: flex-start; gap: 1.75rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .day-big-num { font-family: var(--serif); font-size: 4.5rem; font-weight: 300; color: rgba(200,169,81,0.18); line-height: 1; min-width: 72px; }
+    .day-details h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; color: var(--white); margin-bottom: 0.25rem; }
+    .day-badge { display: inline-block; background: rgba(200,169,81,0.13); border: 1px solid rgba(200,169,81,0.28); color: var(--gold-lt); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.18rem 0.6rem; margin-bottom: 0.45rem; }
+    .day-date { font-size: 0.7rem; color: rgba(255,255,255,0.36); letter-spacing: 0.05em; }
+    .session { display: grid; grid-template-columns: 108px 1fr; border: 1px solid rgba(255,255,255,0.07); margin-bottom: 0.45rem; background: rgba(255,255,255,0.025); transition: background 0.2s, border-color 0.2s; }
+    .session:hover { background: rgba(255,255,255,0.05); border-color: rgba(200,169,81,0.22); }
+    .session-time { padding: 1.1rem 0.8rem; font-size: 0.6rem; font-weight: 600; color: rgba(255,255,255,0.32); letter-spacing: 0.04em; border-right: 1px solid rgba(255,255,255,0.07); display: flex; align-items: flex-start; justify-content: center; text-align: center; line-height: 1.55; }
+    .session-body { padding: 1.1rem 1.2rem; }
+    .session-tag { display: inline-block; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.13rem 0.48rem; margin-bottom: 0.45rem; }
+    .tag-keynote  { background: rgba(200,169,81,0.13); color: var(--gold-lt); border: 1px solid rgba(200,169,81,0.28); }
+    .tag-tutorial { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.1); }
+    .tag-break    { background: transparent; color: rgba(255,255,255,0.28); border: 1px solid rgba(255,255,255,0.09); }
+    .tag-social   { background: rgba(200,169,81,0.08); color: var(--gold); border: 1px solid rgba(200,169,81,0.2); }
+    .tag-handson  { background: rgba(200,169,81,0.11); color: var(--gold-lt); border: 1px solid rgba(200,169,81,0.24); }
+    .session-title { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 0.28rem; line-height: 1.35; }
+    .session-desc { font-size: 0.76rem; color: rgba(255,255,255,0.42); line-height: 1.65; margin-bottom: 0.35rem; }
+    .session-speaker { font-size: 0.68rem; color: var(--gold); font-weight: 500; }
+
+    /* SPEAKERS */
+    .speakers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
+    .speaker-card { background: var(--white); padding: 1.7rem 1.5rem; transition: background 0.2s; }
+    .speaker-card:hover { background: var(--section-bg); }
+    .speaker-initial { width: 50px; height: 50px; border-radius: 50%; background: var(--charcoal); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.05rem; color: var(--gold); margin-bottom: 1rem; border: 2px solid var(--border); }
+    .speaker-name { font-size: 0.87rem; font-weight: 600; color: var(--black); margin-bottom: 0.18rem; }
+    .speaker-role { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: 0.28rem; }
+    .speaker-affil { font-size: 0.71rem; color: var(--ash); }
+
+    /* VENUE */
+    #venue { background: var(--section-bg); }
+    .venue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+    .venue-block { margin-bottom: 1.75rem; }
+    .venue-lbl { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-dk); margin-bottom: 0.38rem; }
+    .venue-val { font-size: 0.9rem; color: var(--charcoal); line-height: 1.75; }
+    .venue-map-box { background: var(--charcoal); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 270px; border: 1px solid var(--border); padding: 2.5rem; text-align: center; }
+    .venue-map-pin { font-size: 1.8rem; margin-bottom: 0.7rem; }
+    .venue-map-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--white); margin-bottom: 0.4rem; }
+    .venue-map-addr { font-size: 0.77rem; color: rgba(255,255,255,0.45); margin-bottom: 1.2rem; line-height: 1.7; }
+    .venue-link { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,169,81,0.38); padding-bottom: 0.1rem; }
+    .venue-link:hover { border-color: var(--gold); }
+
+    /* APPLY */
+    .apply-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+    .apply-info-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; margin-bottom: 0.7rem; color: var(--black); }
+    .apply-list { list-style: none; margin-bottom: 2rem; }
+    .apply-list li { font-size: 0.84rem; color: var(--charcoal); padding: 0.52rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 0.6rem; line-height: 1.5; }
+    .apply-list li::before { content: '—'; color: var(--gold); font-size: 0.8rem; flex-shrink: 0; }
+    .form-notice { background: var(--section-bg); border-left: 3px solid var(--gold); padding: 1rem 1.2rem; font-size: 0.8rem; color: var(--stone); margin-bottom: 1.6rem; line-height: 1.65; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.19em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.38rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--white); border: 1px solid var(--border); color: var(--black); padding: 0.68rem 0.88rem; font-family: var(--sans); font-size: 0.85rem; outline: none; transition: border-color 0.2s; -webkit-appearance: none; border-radius: 0; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold-dk); }
+    .form-group textarea { resize: vertical; min-height: 88px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+
+    /* SPONSORS */
+    #sponsors { background: var(--section-bg); }
+    .sponsor-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; padding: 1.65rem 2rem; border: 1px solid var(--border); background: var(--white); margin-bottom: 0.5rem; }
+    .sponsor-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--black); }
+    .sponsor-type { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ash); margin-top: 0.18rem; }
+
+    /* FOOTER */
+    footer { background: var(--black); border-top: 3px solid var(--gold); padding: 4rem 3rem 2.5rem; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.09); margin-bottom: 2rem; }
+    .footer-brand-title { font-family: var(--serif); font-size: 1.45rem; font-weight: 300; color: var(--white); margin-bottom: 0.45rem; }
+    .footer-brand-sub { font-size: 0.67rem; color: rgba(255,255,255,0.38); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .footer-brand-desc { font-size: 0.78rem; color: rgba(255,255,255,0.42); line-height: 1.8; max-width: 320px; }
+    .footer-col-title { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.48rem; }
+    .footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.46); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-copyright { font-size: 0.68rem; color: rgba(255,255,255,0.28); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .hero-content { padding: 0 2rem 3.5rem; }
+      .section { padding: 4rem 1.5rem; }
+      .about-grid, .venue-grid, .apply-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .form-row { grid-template-columns: 1fr; }
+      .session { grid-template-columns: 88px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-mark">MaDeLaNe</span>
+    <div class="nav-divider"></div>
+    <span class="nav-brand-sub">Vanderbilt · 2026</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#topics">Topics</a></li>
+    <li><a href="#schedule">Schedule</a></li>
+    <li><a href="#speakers">Faculty</a></li>
+    <li><a href="#venue">Venue</a></li>
+    <li><a href="#apply" class="nav-cta-link" onclick="openModal();return false;">Apply</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-network"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Vanderbilt University · Data Science Institute · 2026</p>
+    <h1 class="hero-title"><strong>MaDeLaNe</strong> Workshop<br/><em>2026</em></h1>
+    <p class="hero-sub">Multi-Area · High-Density · Laminar Neurophysiology<br/>A three-day intensive workshop on state-of-the-art analysis of large-scale neural data.</p>
+    <div class="hero-pills">
+      <span class="pill"><span class="pill-icon">📅</span> June 1–3, 2026</span>
+      <span class="pill"><span class="pill-icon">📍</span> DSI · Nashville, TN</span>
+      <span class="pill"><span class="pill-icon">👥</span> ~50 Participants</span>
+      <span class="pill"><span class="pill-icon">🎓</span> PhDs &amp; Postdocs</span>
+    </div>
+    <div class="hero-actions">
+      <button class="btn btn-gold" onclick="openModal()">Apply Now</button>
+      <a href="#schedule" class="btn btn-outline-white">View Schedule</a>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section">
+    <p class="section-label">About the Workshop</p>
+    <h2 class="section-heading">Big Data in Neuroscience.<br/><em>Methods to Match.</em></h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Recent advances in neuronal recording now permit researchers to record from hundreds to thousands of sites in cortical and sub-cortical areas in both animal models and in human patients undergoing medical monitoring. Recordings are performed as subjects perform complex cognitive tasks, measuring both local field potential (LFP) activity and action potential discharges.</p>
+        <p>These multi-dimensional datasets generate a "big data" problem. How should researchers organize, process, analyze, and mine these data? How can both human and animal data be combined to inform our understanding of brain function? MaDeLaNe presents the latest state-of-the-art answers to these questions, with a focus on data from non-human primates and humans.</p>
+        <p>Topics include the latest recording techniques, multi-laminar analysis, spike sorting, cell-type specific circuit analysis, connectivity analysis, and detection of synchronous network activity. A combination of external and internal experts deliver presentations and data-driven tutorials, and workshop participants learn by actively participating in these tutorials.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-cell"><div class="stat-number">3</div><div class="stat-label">Days of Training</div></div>
+        <div class="stat-cell"><div class="stat-number">~10</div><div class="stat-label">Tutorial Sessions</div></div>
+        <div class="stat-cell"><div class="stat-number">3</div><div class="stat-label">Keynote Lectures</div></div>
+        <div class="stat-cell"><div class="stat-number">~50</div><div class="stat-label">Participants</div></div>
+        <div class="stat-cell"><div class="stat-number">3<sup style="font-size:0.45em;vertical-align:super;">rd</sup></div><div class="stat-label">Annual Edition</div></div>
+        <div class="stat-cell"><div class="stat-number">Free</div><div class="stat-label">Registration</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:0.3;"></div>
+
+<!-- TOPICS -->
+<section id="topics">
+  <div class="section">
+    <p class="section-label">Curriculum</p>
+    <h2 class="section-heading">What You Will Learn</h2>
+    <p class="section-intro">Three thematic days progress from raw data to population-level circuit insight. Each topic is delivered as a presentation followed by a hands-on tutorial, with a focus on data from non-human primates and human patients.</p>
+    <div class="topics-grid">
+      <div class="topic-card"><div class="topic-num">01</div><div class="topic-name">Recording Approaches</div><div class="topic-desc">Historical limitations of traditional recordings. New approaches with flexible electrodes and applications in both human patients and animal models.</div></div>
+      <div class="topic-card"><div class="topic-num">02</div><div class="topic-name">Spike Sorting</div><div class="topic-desc">KIAsort, Kilosort, and Phy. From raw voltage traces to well-isolated single units. Analysis of interspike interval distributions and quality control.</div></div>
+      <div class="topic-card"><div class="topic-num">03</div><div class="topic-name">Neurodata Without Borders</div><div class="topic-desc">NWB data formatting standards and open-source tools for organizing, sharing, and reusing large-scale multi-site neurophysiology recordings.</div></div>
+      <div class="topic-card"><div class="topic-num">04</div><div class="topic-name">Optogenetics in NHP</div><div class="topic-desc">Basics of optogenetics and application in non-human primates. Opsin and laser selection, delivery methods, artifact handling, opto-tagging, and testing theories on cell-type function in cognition.</div></div>
+      <div class="topic-card"><div class="topic-num">05</div><div class="topic-name">Multi-Laminar Spectral Analysis</div><div class="topic-desc">The spectrolaminar motif, FLIP and vFLIP techniques. Comparison to current source density and discussion of relative strengths and weaknesses.</div></div>
+      <div class="topic-card"><div class="topic-num">06</div><div class="topic-name">Biophysical Modeling</div><div class="topic-desc">Using the Genetic Stochastic Delta Rule (GSDR) to reveal neurobiological insights about oscillations and neural circuit dynamics.</div></div>
+      <div class="topic-card"><div class="topic-num">07</div><div class="topic-name">Human Intracranial Neurophysiology</div><div class="topic-desc">Intracranial EEG and Utah array recordings from neurosurgical patients. Analysis of reward circuits, somatotopic modulation, and decoding of motor signals from human spiking data.</div></div>
+      <div class="topic-card"><div class="topic-num">08</div><div class="topic-name">Functional Cell Classes &amp; Population Coding</div><div class="topic-desc">Clustering of spike waveforms, functional cell class analysis, population firing rate methods, spike sequences in population bursts, and information decoding during cognitive tasks.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="section">
+    <p class="section-label">2026 Program</p>
+    <h2 class="section-heading">3-Day Schedule</h2>
+    <p class="section-intro">The full schedule for MaDeLaNe 2026 is confirmed. Sessions run 9 AM – 5 PM daily at the Vanderbilt Data Science Institute, with an evening social on Day 2.</p>
+
+    <div class="schedule-tabs">
+      <button class="tab-btn active" onclick="showTab('d1',this)">Day 1 — Spikes, NWB &amp; Optogenetics</button>
+      <button class="tab-btn" onclick="showTab('d2',this)">Day 2 — Laminar Analysis &amp; Human Data</button>
+      <button class="tab-btn" onclick="showTab('d3',this)">Day 3 — Cell Classes &amp; Population Coding</button>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="tab-panel active" id="d1">
+      <div class="day-header">
+        <div class="day-big-num">01</div>
+        <div class="day-details">
+          <div class="day-badge">From Spiking Data to Circuit Motifs</div>
+          <h3>Recording Approaches, Spike Sorting, NWB &amp; Optogenetics</h3>
+          <p class="day-date">Monday, June 1 · 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+      <div class="session"><div class="session-time">9:00–10:20 AM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Recording Approaches in Systems Neuroscience</div><div class="session-desc">Historical limitations of traditional recordings. New approaches pioneered in the lab with flexible electrodes, with applications in both humans and animals.</div><div class="session-speaker">Led by Daniel Gonzales</div></div></div>
+      <div class="session"><div class="session-time">10:20–10:40 AM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Morning Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">10:40 AM–12:00 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Spike Sorting — KIAsort, Kilosort &amp; Phy</div><div class="session-desc">From raw voltage traces to well-isolated single units. Analysis of interspike interval distributions and quality control metrics.</div><div class="session-speaker">Led by Kianoush Boroujeni</div></div></div>
+      <div class="session"><div class="session-time">12:00–1:00 PM</div><div class="session-body"><span class="session-tag tag-break">Lunch</span><div class="session-title">Lunch — Provided by Vanderbilt Brain Institute</div></div></div>
+      <div class="session"><div class="session-time">1:00–2:20 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Neurodata Without Borders (NWB)</div><div class="session-desc">Data formatting standards and open-source tools for organizing, sharing, and reusing large-scale multi-site neurophysiology recordings.</div><div class="session-speaker">Led by Jacob Westerberg · Tutors: Sophy Xiong, Hamed Nejat</div></div></div>
+      <div class="session"><div class="session-time">2:20–2:40 PM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Afternoon Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">2:40–4:00 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Optogenetics in Non-Human Primates</div><div class="session-desc">Basics of optogenetics technique and application in NHP. Choice of opsin, laser, and delivery method. Consideration of artifacts, opto-tagging, and testing theories on cell-type function in cognition.</div><div class="session-speaker">Led by Christos Constantinidis · Tutors: Rana Mozumder, Sophy Xiong</div></div></div>
+      <div class="session"><div class="session-time">4:00–5:00 PM</div><div class="session-body"><span class="session-tag tag-keynote">Keynote</span><div class="session-title">Keynote 1 — Using MaDeLaNe to Study Predictive Processing</div><div class="session-desc">An invited talk on predictive processing frameworks and their investigation using multi-area, high-density laminar recordings.</div><div class="session-speaker">Sophy Xiong</div></div></div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="tab-panel" id="d2">
+      <div class="day-header">
+        <div class="day-big-num">02</div>
+        <div class="day-details">
+          <div class="day-badge">Multi-Laminar Analysis &amp; Human Neurophysiology</div>
+          <h3>Spectrolaminar Motifs, Biophysical Modeling &amp; Human Data</h3>
+          <p class="day-date">Tuesday, June 2 · 9:00 AM – 5:00 PM + Evening Social</p>
+        </div>
+      </div>
+      <div class="session"><div class="session-time">9:00–10:20 AM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Multi-Laminar Spectral Analysis</div><div class="session-desc">The spectrolaminar motif, FLIP and vFLIP techniques. Comparison to current source density and discussion of relative strengths and weaknesses of each method.</div><div class="session-speaker">Led by Diego Mendoza-Halliday · Tutor: André Bastos</div></div></div>
+      <div class="session"><div class="session-time">10:20–10:40 AM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Morning Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">10:40 AM–12:00 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Biophysical Modeling with the Genetic Stochastic Delta Rule</div><div class="session-desc">Using the GSDR to reveal neurobiological insights about oscillations. How biophysical constraints shape population-level dynamics and spectral signatures.</div><div class="session-speaker">Led by Hamed Nejat · Tutors: André Bastos</div></div></div>
+      <div class="session"><div class="session-time">12:00–1:00 PM</div><div class="session-body"><span class="session-tag tag-break">Lunch</span><div class="session-title">Lunch — Provided by Vanderbilt Brain Institute</div></div></div>
+      <div class="session"><div class="session-time">1:00–2:20 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Reward Circuit Modulations in Human Intracranial EEG</div><div class="session-desc">Recordings of local field potentials from neurosurgical patients to understand reward circuit modulations that precede risk taking. Analysis of human intracranial data and unique advantages and limitations of human neuroscience using neurosurgical patients.</div><div class="session-speaker">Led by Sarah Bick</div></div></div>
+      <div class="session"><div class="session-time">2:20–2:40 PM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Afternoon Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">2:40–3:40 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Spatial Analysis of Human Spiking Data with Utah Arrays</div><div class="session-desc">Somatotopic modulation of neural activity in human cortex in relation to digit movements. Decoding of human motor signals with Utah array spiking data.</div><div class="session-speaker">Led by Anton Sobinov</div></div></div>
+      <div class="session"><div class="session-time">4:00–5:00 PM</div><div class="session-body"><span class="session-tag tag-keynote">Keynote</span><div class="session-title">Keynote 2 — A Spectrolaminar Framework for Cortical Electrophysiology</div><div class="session-desc">A comprehensive framework linking the spectrolaminar motif to canonical cortical circuits and its implications for understanding multi-area communication.</div><div class="session-speaker">Diego Mendoza-Halliday</div></div></div>
+      <div class="session"><div class="session-time">5:00–7:00 PM</div><div class="session-body"><span class="session-tag tag-social">Social</span><div class="session-title">Evening Social — Hosted by the DSI</div><div class="session-desc">Beer, wine, and non-alcoholic options. A relaxed opportunity to meet fellow participants and instructors. Open to participants 21+.</div></div></div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="tab-panel" id="d3">
+      <div class="day-header">
+        <div class="day-big-num">03</div>
+        <div class="day-details">
+          <div class="day-badge">Connection to Human Neurophysiology at the Neuron Level</div>
+          <h3>Functional Cell Classes, Population Coding &amp; Human Spiking</h3>
+          <p class="day-date">Wednesday, June 3 · 9:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+      <div class="session"><div class="session-time">9:00–10:20 AM</div><div class="session-body"><span class="session-tag tag-social">Special Session</span><div class="session-title">Roundtable Discussion with Scott Imbrie</div><div class="session-desc">A unique discussion with Scott Imbrie, who is implanted with Utah arrays in M1/S1, on the unique potentials of advancing neuroscience with human data. Roundtable moderated by Alex Maier, Diego Mendoza-Halliday, André Bastos, and Anton Sobinov.</div><div class="session-speaker">Special Guest: Scott Imbrie</div></div></div>
+      <div class="session"><div class="session-time">10:20–10:40 AM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Morning Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">10:40 AM–12:00 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Functional Cell Classes</div><div class="session-desc">Clustering of spike waveforms, post vs. pre MUA ratio analysis, relationship to bursts and synchrony, spike-triggered MUA, time-resolved cross-correlation, and routing dynamics.</div><div class="session-speaker">Led by Kia Banaie Boroujeni</div></div></div>
+      <div class="session"><div class="session-time">12:00–1:00 PM</div><div class="session-body"><span class="session-tag tag-break">Lunch</span><div class="session-title">Lunch — Provided by Vanderbilt Brain Institute</div></div></div>
+      <div class="session"><div class="session-time">1:00–2:20 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Population Coding in Multi-Channel Human Spiking Data</div><div class="session-desc">Population firing rate methods for decoding information about content or representations of time. Applied to multi-electrode recordings in human cortex.</div><div class="session-speaker">Led by Ian Bright &amp; Kareem Zaghloul</div></div></div>
+      <div class="session"><div class="session-time">2:20–2:40 PM</div><div class="session-body"><span class="session-tag tag-break">Break</span><div class="session-title">Afternoon Coffee &amp; Tea</div></div></div>
+      <div class="session"><div class="session-time">2:40–4:00 PM</div><div class="session-body"><span class="session-tag tag-tutorial">Tutorial</span><div class="session-title">Coordinated Burst Spiking in Large-Scale Human Data</div><div class="session-desc">Techniques to determine spike sequences in population spiking activity. Illustration of how spike sequences can be used to decode information during cognitive tasks.</div><div class="session-speaker">Led by Ian Bright &amp; Kareem Zaghloul</div></div></div>
+      <div class="session"><div class="session-time">4:00–5:00 PM</div><div class="session-body"><span class="session-tag tag-keynote">Keynote</span><div class="session-title">Keynote 3 — Neuronal Sequences in Population Bursts Encode Information in Human Cortex</div><div class="session-desc">Closing keynote on how coordinated neuronal sequences within population bursts serve as a neural code for information storage and retrieval in human cortex.</div><div class="session-speaker">Kareem Zaghloul</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers">
+  <div class="section">
+    <p class="section-label">Instructors &amp; Speakers</p>
+    <h2 class="section-heading">Workshop Faculty</h2>
+    <p class="section-intro">MaDeLaNe 2026 brings together a distinguished group of systems neuroscientists working at the cutting edge of multi-area, high-density, and laminar neurophysiology — spanning non-human primate, rodent, and human patient research.</p>
+    <div class="speakers-grid">
+      <div class="speaker-card"><div class="speaker-initial">AB</div><div class="speaker-name">André Bastos, PhD</div><div class="speaker-role">Workshop Organizer</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">DM</div><div class="speaker-name">Diego Mendoza-Halliday, PhD</div><div class="speaker-role">Instructor &amp; Keynote 2 · Spectrolaminar Analysis</div><div class="speaker-affil">TBD</div></div>
+      <div class="speaker-card"><div class="speaker-initial">KZ</div><div class="speaker-name">Kareem Zaghloul, MD PhD</div><div class="speaker-role">Instructor &amp; Keynote 3 · Human Spiking</div><div class="speaker-affil">NIH / NINDS</div></div>
+      <div class="speaker-card"><div class="speaker-initial">IB</div><div class="speaker-name">Ian Bright, PhD</div><div class="speaker-role">Instructor · Population Coding</div><div class="speaker-affil">TBD</div></div>
+      <div class="speaker-card"><div class="speaker-initial">AS</div><div class="speaker-name">Anton Sobinov, PhD</div><div class="speaker-role">Instructor · Human Utah Array Data</div><div class="speaker-affil">TBD</div></div>
+      <div class="speaker-card"><div class="speaker-initial">CC</div><div class="speaker-name">Christos Constantinidis, PhD</div><div class="speaker-role">Instructor · Optogenetics in NHP</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">DG</div><div class="speaker-name">Daniel Gonzales</div><div class="speaker-role">Instructor · Recording Approaches</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">KB</div><div class="speaker-name">Kianoush Boroujeni</div><div class="speaker-role">Instructor · Spike Sorting</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">SB</div><div class="speaker-name">Sarah Bick, MD PhD</div><div class="speaker-role">Instructor · Human iEEG &amp; Reward</div><div class="speaker-affil">Vanderbilt University Medical Center</div></div>
+      <div class="speaker-card"><div class="speaker-initial">JW</div><div class="speaker-name">Jacob Westerberg, PhD</div><div class="speaker-role">Instructor · NWB</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">SX</div><div class="speaker-name">Sophy Xiong</div><div class="speaker-role">Keynote 1 · Predictive Processing</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">HN</div><div class="speaker-name">Hamed Nejat</div><div class="speaker-role">Instructor · Biophysical Modeling</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card"><div class="speaker-initial">KBB</div><div class="speaker-name">Kia Banaie Boroujeni</div><div class="speaker-role">Instructor · Functional Cell Classes</div><div class="speaker-affil">Vanderbilt University</div></div>
+      <div class="speaker-card" style="background:var(--section-bg);"><div class="speaker-initial" style="font-size:0.8rem;background:var(--charcoal);color:var(--gold);">SI</div><div class="speaker-name">Scott Imbrie</div><div class="speaker-role">Special Guest · Utah Array Implantee</div><div class="speaker-affil">Day 3 Roundtable Discussion</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:0.3;"></div>
+
+<!-- VENUE -->
+<section id="venue">
+  <div class="section">
+    <p class="section-label">Location</p>
+    <h2 class="section-heading">Where &amp; When</h2>
+    <div class="venue-grid">
+      <div>
+        <div class="venue-block"><div class="venue-lbl">Venue</div><div class="venue-val">Data Science Institute (DSI)<br/>1400 18th Ave South<br/>Vanderbilt University, Nashville, Tennessee</div></div>
+        <div class="venue-block"><div class="venue-lbl">Room</div><div class="venue-val">Classroom A2001A</div></div>
+        <div class="venue-block"><div class="venue-lbl">Dates</div><div class="venue-val">Monday–Wednesday, June 1–3, 2026 · 9:00 AM – 5:00 PM daily</div></div>
+        <div class="venue-block"><div class="venue-lbl">Getting Here</div><div class="venue-val">Nashville International Airport (BNA) is approximately 20 minutes from campus. Hotel recommendations will be provided upon acceptance.</div></div>
+      </div>
+      <div class="venue-map-box">
+        <div class="venue-map-pin">📍</div>
+        <div class="venue-map-name">Data Science Institute</div>
+        <div class="venue-map-addr">Vanderbilt University<br/>1400 18th Ave South<br/>Nashville, TN 37212</div>
+        <a href="https://www.vanderbilt.edu/datascience/" target="_blank" class="venue-link">Visit DSI Website →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply">
+  <div class="section">
+    <p class="section-label">Registration</p>
+    <h2 class="section-heading">Apply to Attend</h2>
+    <p class="section-intro">Space is limited to approximately 50 participants drawn from Vanderbilt and other institutes. Priority is given to PhD students and postdoctoral researchers in systems neuroscience and related fields, with advanced undergraduates and Masters students welcome if space permits.</p>
+    <div class="apply-grid">
+      <div>
+        <div class="apply-info-title">Who Should Apply</div>
+        <ul class="apply-list">
+          <li>PhD students in neuroscience or related fields</li>
+          <li>Postdoctoral researchers working with neural data</li>
+          <li>Advanced undergraduates or Masters students (space permitting)</li>
+          <li>Researchers interested in large-scale neural recordings</li>
+          <li>Participants willing to bring their own data on the final day</li>
+        </ul>
+        <div class="apply-info-title" style="margin-top:0.5rem;">What Is Included</div>
+        <ul class="apply-list">
+          <li>Lunch provided all three days, sponsored by Vanderbilt Brain Institute</li>
+          <li>Morning and afternoon coffee, tea, and snacks each day</li>
+          <li>Full access to all tutorial materials, slides, and code</li>
+          <li>Evening social event on Day 2 (participants 21+)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="form-notice">Applications for MaDeLaNe 2026 will open in early 2026. Click below to open the application form — it takes approximately 5 minutes to complete.</div>
+        <div style="border: 1px solid var(--border); padding: 2.5rem; text-align: center; background: var(--section-bg);">
+          <div style="font-family: var(--serif); font-size: 1.4rem; font-weight: 300; margin-bottom: 0.5rem;">Ready to Apply?</div>
+          <div style="font-size: 0.82rem; color: var(--ash); margin-bottom: 2rem; line-height: 1.7;">The application takes about 5 minutes. You'll need your CV and a brief description of your research background.</div>
+          <button class="btn btn-gold" style="width: 100%; font-size: 0.8rem;" onclick="openModal()">Open Application Form →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:0.3;"></div>
+
+<!-- SPONSORS -->
+<section id="sponsors">
+  <div class="section">
+    <p class="section-label">Sponsors</p>
+    <h2 class="section-heading">Supported By</h2>
+    <p class="section-intro">MaDeLaNe 2026 is made possible by the generous support of our sponsors. Interested in sponsoring? Please contact the organizing team.</p>
+    <div style="margin-top:2.5rem;">
+      <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Brain Institute</div><div class="sponsor-type">Presenting Sponsor · Lunch Sponsor all 3 Days</div></div><a href="https://www.vanderbilt.edu/vbi/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit VBI</a></div>
+      <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Data Science Institute</div><div class="sponsor-type">Host Institution · Evening Social Sponsor</div></div><a href="https://www.vanderbilt.edu/datascience/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit DSI</a></div>
+      <div class="sponsor-row" style="background:var(--cloud);border-style:dashed;"><div><div class="sponsor-name" style="color:var(--ash);">Become a Sponsor</div><div class="sponsor-type">Contact us to discuss 2026 sponsorship opportunities</div></div><a href="mailto:andre.bastos@vanderbilt.edu" class="btn btn-gold" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Contact Us</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-title">MaDeLaNe Workshop 2026</div>
+      <div class="footer-brand-sub">Multi-Area · High-Density · Laminar Neurophysiology</div>
+      <div class="footer-brand-desc">An annual workshop at Vanderbilt University dedicated to training the next generation of neural data scientists in state-of-the-art large-scale neurophysiology analysis methods.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="#about">About the Workshop</a></li>
+        <li><a href="#topics">Curriculum</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#speakers">Faculty</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#apply">Apply</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Links</div>
+      <ul class="footer-links">
+        <li><a href="https://www.bastoslabvu.com" target="_blank">Bastos Lab</a></li>
+        <li><a href="https://www.vanderbilt.edu/datascience/" target="_blank">Data Science Institute</a></li>
+        <li><a href="https://www.vanderbilt.edu" target="_blank">Vanderbilt University</a></li>
+        <li><a href="mailto:andre.bastos@vanderbilt.edu">Contact the Organizers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">© 2026 Bastos Lab · Vanderbilt University · All rights reserved</div>
+    <div class="footer-copyright">Nashville, Tennessee · 111 21st Ave N</div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════
+     APPLICATION MODAL
+════════════════════════════════════ -->
+<div id="appModal" style="display:none; position:fixed; inset:0; z-index:1000; overflow-y:auto;">
+  <!-- Backdrop -->
+  <div onclick="closeModal()" style="position:fixed; inset:0; background:rgba(10,10,10,0.72); backdrop-filter:blur(4px);"></div>
+
+  <!-- Modal Panel -->
+  <div style="position:relative; z-index:1001; max-width:680px; margin: 4rem auto; background:var(--white); border-top: 4px solid var(--gold); box-shadow: 0 24px 80px rgba(0,0,0,0.3);">
+
+    <!-- Modal Header -->
+    <div style="background:var(--charcoal); padding:2rem 2.5rem; display:flex; align-items:flex-start; justify-content:space-between; gap:1rem;">
+      <div>
+        <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem;">MaDeLaNe 2026</div>
+        <div style="font-family:var(--serif); font-size:1.5rem; font-weight:300; color:var(--white); line-height:1.2;">Workshop Application</div>
+        <div style="font-size:0.72rem; color:rgba(255,255,255,0.45); margin-top:0.35rem;">Vanderbilt University · Data Science Institute</div>
+      </div>
+      <button onclick="closeModal()" style="background:none; border:none; cursor:pointer; color:rgba(255,255,255,0.45); font-size:1.4rem; line-height:1; padding:0.2rem; margin-top:0.15rem; transition:color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">✕</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progressBar" style="height:3px; background:var(--border);">
+      <div id="progressFill" style="height:100%; background:var(--gold); width:0%; transition:width 0.4s ease;"></div>
+    </div>
+
+    <!-- Form Body -->
+    <div style="padding:2.5rem;">
+
+      <!-- STEP 1 -->
+      <div id="step1" class="modal-step">
+        <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--ash); margin-bottom:1.5rem;">Step 1 of 3 — Personal Information</div>
+
+        <div class="mfg"><label class="mfl">Full Name <span style="color:var(--gold);">*</span></label>
+          <input class="mfi" type="text" id="f_name" placeholder="Jane Smith" required/></div>
+
+        <div class="mfg"><label class="mfl">Email Address <span style="color:var(--gold);">*</span></label>
+          <input class="mfi" type="email" id="f_email" placeholder="jane@vanderbilt.edu" required/></div>
+
+        <div class="mfg"><label class="mfl">Current Academic Affiliation <span style="color:var(--gold);">*</span></label>
+          <input class="mfi" type="text" id="f_affil" placeholder="e.g. Vanderbilt University, Department of Psychology" required/></div>
+
+        <div class="mfg"><label class="mfl">Training Level <span style="color:var(--gold);">*</span></label>
+          <select class="mfi" id="f_level">
+            <option value="">— Select —</option>
+            <option>PhD Student</option>
+            <option>Postdoctoral Researcher</option>
+            <option>Masters Student</option>
+            <option>Advanced Undergraduate</option>
+            <option>Faculty / Staff</option>
+          </select></div>
+
+        <div style="margin-top:2rem; display:flex; justify-content:flex-end;">
+          <button class="btn btn-gold" onclick="goStep(2)">Continue →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step2" class="modal-step" style="display:none;">
+        <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--ash); margin-bottom:1.5rem;">Step 2 of 3 — Background &amp; Motivation</div>
+
+        <div class="mfg">
+          <label class="mfl">What is your prior background with neurophysiological data analysis? <span style="color:var(--gold);">*</span></label>
+          <div style="font-size:0.73rem; color:var(--ash); margin-bottom:0.5rem; line-height:1.6;">Describe your experience with neural data, relevant programming languages (e.g. MATLAB, Python), tools, and any previous projects or coursework.</div>
+          <textarea class="mfi" id="f_background" rows="5" placeholder="e.g. I have two years of experience analyzing EEG data using MATLAB. I am familiar with basic filtering and spectral analysis but have not worked with laminar recordings or spike sorting…" required></textarea>
+        </div>
+
+        <div class="mfg" style="margin-top:1.5rem;">
+          <label class="mfl">What do you hope to achieve from attending this workshop? <span style="color:var(--gold);">*</span></label>
+          <div style="font-size:0.73rem; color:var(--ash); margin-bottom:0.5rem; line-height:1.6;">Describe specific skills, techniques, or goals. If you have your own data, briefly describe it and which workshop modules are most relevant to your work.</div>
+          <textarea class="mfi" id="f_goals" rows="5" placeholder="e.g. I hope to learn spike sorting and functional connectivity methods to apply to our multi-electrode array recordings in prefrontal cortex during a working memory task…" required></textarea>
+        </div>
+
+        <div style="margin-top:2rem; display:flex; justify-content:space-between;">
+          <button class="btn btn-outline-dark" onclick="goStep(1)">← Back</button>
+          <button class="btn btn-gold" onclick="goStep(3)">Continue →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="step3" class="modal-step" style="display:none;">
+        <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--ash); margin-bottom:1.5rem;">Step 3 of 3 — CV Upload</div>
+
+        <div class="mfg">
+          <label class="mfl">Upload Your CV <span style="color:var(--gold);">*</span></label>
+          <div style="font-size:0.73rem; color:var(--ash); margin-bottom:0.75rem; line-height:1.6;">Please upload a current CV or résumé. Accepted formats: PDF, DOC, DOCX. Maximum file size: 5 MB.</div>
+
+          <!-- Drop Zone -->
+          <div id="dropZone"
+            ondragover="event.preventDefault(); this.style.borderColor='var(--gold)'; this.style.background='#faf8f0';"
+            ondragleave="this.style.borderColor='var(--border)'; this.style.background='var(--section-bg)';"
+            ondrop="handleDrop(event)"
+            onclick="document.getElementById('cvInput').click()"
+            style="border:2px dashed var(--border); background:var(--section-bg); padding:2.5rem; text-align:center; cursor:pointer; transition:all 0.2s;">
+            <div style="font-size:1.6rem; margin-bottom:0.6rem;">📄</div>
+            <div style="font-size:0.85rem; font-weight:600; color:var(--black); margin-bottom:0.3rem;">Drag &amp; drop your CV here</div>
+            <div style="font-size:0.72rem; color:var(--ash);">or click to browse files</div>
+            <input type="file" id="cvInput" accept=".pdf,.doc,.docx" style="display:none;" onchange="handleFileSelect(this)"/>
+          </div>
+
+          <!-- File Preview -->
+          <div id="filePreview" style="display:none; margin-top:0.75rem; padding:0.85rem 1rem; background:var(--white); border:1px solid var(--border); display:none; align-items:center; gap:0.75rem;">
+            <span style="font-size:1.1rem;">📎</span>
+            <div style="flex:1; min-width:0;">
+              <div id="fileName" style="font-size:0.82rem; font-weight:600; color:var(--black); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"></div>
+              <div id="fileSize" style="font-size:0.7rem; color:var(--ash);"></div>
+            </div>
+            <button onclick="removeFile()" style="background:none; border:none; cursor:pointer; color:var(--ash); font-size:0.8rem; padding:0.2rem 0.4rem;" onmouseover="this.style.color='var(--black)'" onmouseout="this.style.color='var(--ash)'">✕ Remove</button>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div style="margin-top:1.75rem; background:var(--section-bg); border:1px solid var(--border); padding:1.25rem 1.5rem;">
+          <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-dk); margin-bottom:0.75rem;">Application Summary</div>
+          <div id="summaryName"  style="font-size:0.82rem; color:var(--charcoal); margin-bottom:0.3rem;"></div>
+          <div id="summaryEmail" style="font-size:0.82rem; color:var(--charcoal); margin-bottom:0.3rem;"></div>
+          <div id="summaryAffil" style="font-size:0.82rem; color:var(--charcoal);"></div>
+        </div>
+
+        <div style="margin-top:2rem; display:flex; justify-content:space-between; align-items:center;">
+          <button class="btn btn-outline-dark" onclick="goStep(2)">← Back</button>
+          <button class="btn btn-gold" id="submitBtn" onclick="submitApp()" style="min-width:180px;">Submit Application</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div id="stepSuccess" class="modal-step" style="display:none; text-align:center; padding:1rem 0 0.5rem;">
+        <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+        <div style="font-family:var(--serif); font-size:1.6rem; font-weight:300; margin-bottom:0.75rem;">Application Received</div>
+        <div style="font-size:0.88rem; color:var(--stone); line-height:1.8; max-width:420px; margin:0 auto 2rem;">Thank you for applying to MaDeLaNe 2026. We will review applications on a rolling basis and be in touch at the email address you provided.</div>
+        <button class="btn btn-outline-dark" onclick="closeModal()">Close</button>
+      </div>
+
+    </div><!-- /form body -->
+  </div><!-- /modal panel -->
+</div><!-- /modal -->
+
+<style>
+  .modal-step { }
+  .mfg { margin-bottom: 1.1rem; }
+  .mfl { display: block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ash); margin-bottom: 0.4rem; }
+  .mfi { width: 100%; background: var(--white); border: 1px solid var(--border); color: var(--black); padding: 0.7rem 0.9rem; font-family: var(--sans); font-size: 0.88rem; outline: none; transition: border-color 0.2s; -webkit-appearance: none; border-radius: 0; }
+  .mfi:focus { border-color: var(--gold-dk); }
+  textarea.mfi { resize: vertical; }
+  #appModal { scrollbar-width: thin; }
+</style>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function openModal() {
+    document.getElementById('appModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    goStep(1);
+  }
+
+  function closeModal() {
+    document.getElementById('appModal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function goStep(n) {
+    [1,2,3,'Success'].forEach(s => {
+      const el = document.getElementById('step' + s);
+      if (el) el.style.display = 'none';
+    });
+    document.getElementById('step' + n).style.display = 'block';
+
+    // Validate before advancing
+    if (n === 2) {
+      const name  = document.getElementById('f_name').value.trim();
+      const email = document.getElementById('f_email').value.trim();
+      const affil = document.getElementById('f_affil').value.trim();
+      const level = document.getElementById('f_level').value;
+      if (!name || !email || !affil || !level) {
+        alert('Please fill in all required fields before continuing.');
+        document.getElementById('step1').style.display = 'block';
+        document.getElementById('step2').style.display = 'none';
+        updateProgress(1);
+        return;
+      }
+    }
+    if (n === 3) {
+      const bg    = document.getElementById('f_background').value.trim();
+      const goals = document.getElementById('f_goals').value.trim();
+      if (!bg || !goals) {
+        alert('Please answer both questions before continuing.');
+        document.getElementById('step2').style.display = 'block';
+        document.getElementById('step3').style.display = 'none';
+        updateProgress(2);
+        return;
+      }
+      // Populate summary
+      document.getElementById('summaryName').textContent  = '👤 ' + document.getElementById('f_name').value.trim();
+      document.getElementById('summaryEmail').textContent = '✉️ ' + document.getElementById('f_email').value.trim();
+      document.getElementById('summaryAffil').textContent = '🏛 ' + document.getElementById('f_affil').value.trim() + ' · ' + document.getElementById('f_level').value;
+    }
+    updateProgress(n);
+    // Scroll modal to top
+    document.getElementById('appModal').scrollTop = 0;
+  }
+
+  function updateProgress(step) {
+    const pct = { 1: 10, 2: 45, 3: 78, 'Success': 100 };
+    document.getElementById('progressFill').style.width = (pct[step] || 10) + '%';
+  }
+
+  function handleFileSelect(input) {
+    if (input.files && input.files[0]) showFile(input.files[0]);
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('dropZone').style.borderColor = 'var(--border)';
+    document.getElementById('dropZone').style.background = 'var(--section-bg)';
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      const ext = file.name.split('.').pop().toLowerCase();
+      if (!['pdf','doc','docx'].includes(ext)) { alert('Please upload a PDF, DOC, or DOCX file.'); return; }
+      showFile(file);
+    }
+  }
+
+  function showFile(file) {
+    const kb = (file.size / 1024).toFixed(0);
+    const mb = (file.size / (1024*1024)).toFixed(2);
+    document.getElementById('fileName').textContent = file.name;
+    document.getElementById('fileSize').textContent = file.size > 1024*1024 ? mb + ' MB' : kb + ' KB';
+    document.getElementById('filePreview').style.display = 'flex';
+    document.getElementById('dropZone').style.display = 'none';
+  }
+
+  function removeFile() {
+    document.getElementById('cvInput').value = '';
+    document.getElementById('filePreview').style.display = 'none';
+    document.getElementById('dropZone').style.display = 'block';
+  }
+
+  function submitApp() {
+    const cv = document.getElementById('cvInput').files[0];
+    if (!cv) { alert('Please upload your CV before submitting.'); return; }
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+    // Simulate submission delay
+    setTimeout(() => {
+      [1,2,3].forEach(s => { document.getElementById('step' + s).style.display = 'none'; });
+      document.getElementById('stepSuccess').style.display = 'block';
+      document.getElementById('progressFill').style.width = '100%';
+    }, 900);
+  }
+
+  // Close on Escape
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
