@@ -707,6 +707,8 @@
     document.getElementById('progressFill').style.width = (pct[step] || 10) + '%';
   }
 
+  let selectedCVFile = null;
+
   function handleFileSelect(input) {
     if (input.files && input.files[0]) showFile(input.files[0]);
   }
@@ -724,6 +726,7 @@
   }
 
   function showFile(file) {
+    selectedCVFile = file;
     const kb = (file.size / 1024).toFixed(0);
     const mb = (file.size / (1024*1024)).toFixed(2);
     document.getElementById('fileName').textContent = file.name;
@@ -733,13 +736,14 @@
   }
 
   function removeFile() {
+    selectedCVFile = null;
     document.getElementById('cvInput').value = '';
     document.getElementById('filePreview').style.display = 'none';
     document.getElementById('dropZone').style.display = 'block';
   }
 
   function submitApp() {
-    const cv = document.getElementById('cvInput').files[0];
+    const cv = selectedCVFile || document.getElementById('cvInput').files[0];
     if (!cv) { alert('Please upload your CV before submitting.'); return; }
     const btn = document.getElementById('submitBtn');
     btn.textContent = 'Submitting…';
