@@ -199,6 +199,18 @@
 </head>
 <body>
 
+<!-- Hidden form for Netlify build-time detection -->
+<form name="application" data-netlify="true" netlify-honeypot="bot-field" hidden enctype="multipart/form-data">
+  <input type="hidden" name="form-name" value="application"/>
+  <input name="name"/>
+  <input name="email"/>
+  <input name="affiliation"/>
+  <input name="level"/>
+  <textarea name="background"></textarea>
+  <textarea name="goals"></textarea>
+  <input type="file" name="cv"/>
+</form>
+
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-brand">
@@ -742,17 +754,36 @@
     document.getElementById('dropZone').style.display = 'block';
   }
 
-  function submitApp() {
+  async function submitApp() {
     const cv = selectedCVFile || document.getElementById('cvInput').files[0];
     const btn = document.getElementById('submitBtn');
     btn.textContent = 'Submitting…';
     btn.disabled = true;
-    // Simulate submission delay
-    setTimeout(() => {
-      [1,2,3].forEach(s => { document.getElementById('step' + s).style.display = 'none'; });
-      document.getElementById('stepSuccess').style.display = 'block';
-      document.getElementById('progressFill').style.width = '100%';
-    }, 900);
+
+    const formData = new FormData();
+    formData.append('form-name', 'application');
+    formData.append('name',        document.getElementById('f_name').value);
+    formData.append('email',       document.getElementById('f_email').value);
+    formData.append('affiliation', document.getElementById('f_affil').value);
+    formData.append('level',       document.getElementById('f_level').value);
+    formData.append('background',  document.getElementById('f_background').value);
+    formData.append('goals',       document.getElementById('f_goals').value);
+    if (cv) formData.append('cv', cv, cv.name);
+
+    try {
+      const res = await fetch('/', { method: 'POST', body: formData });
+      if (res.ok) {
+        [1,2,3].forEach(s => { document.getElementById('step' + s).style.display = 'none'; });
+        document.getElementById('stepSuccess').style.display = 'block';
+        document.getElementById('progressFill').style.width = '100%';
+      } else {
+        throw new Error('Server responded with ' + res.status);
+      }
+    } catch (err) {
+      alert('Submission failed. Please try again or contact andre.bastos@vanderbilt.edu.');
+      btn.textContent = 'Submit Application';
+      btn.disabled = false;
+    }
   }
 
   // Close on Escape
