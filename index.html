@@ -44,7 +44,10 @@
     .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse 900px 700px at 68% 28%, rgba(200,169,81,0.13) 0%, transparent 70%), radial-gradient(ellipse 350px 350px at 85% 65%, rgba(200,169,81,0.06) 0%, transparent 65%); }
     .hero-network { position: absolute; inset: 0; opacity: 0.06; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Ccircle cx='60' cy='90' r='3.5' fill='%23c8a951'/%3E%3Ccircle cx='180' cy='45' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='310' cy='110' r='3' fill='%23c8a951'/%3E%3Ccircle cx='420' cy='60' r='2' fill='%23c8a951'/%3E%3Ccircle cx='110' cy='220' r='3' fill='%23c8a951'/%3E%3Ccircle cx='260' cy='195' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='370' cy='240' r='3' fill='%23c8a951'/%3E%3Ccircle cx='80' cy='350' r='2.5' fill='%23c8a951'/%3E%3Ccircle cx='210' cy='390' r='3' fill='%23c8a951'/%3E%3Ccircle cx='450' cy='340' r='2' fill='%23c8a951'/%3E%3Ccircle cx='340' cy='430' r='2.5' fill='%23c8a951'/%3E%3Cline x1='60' y1='90' x2='180' y2='45' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='180' y1='45' x2='310' y2='110' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='310' y1='110' x2='420' y2='60' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='60' y1='90' x2='110' y2='220' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='180' y1='45' x2='260' y2='195' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='310' y1='110' x2='370' y2='240' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='110' y1='220' x2='260' y2='195' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='260' y1='195' x2='370' y2='240' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='110' y1='220' x2='80' y2='350' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='260' y1='195' x2='210' y2='390' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='370' y1='240' x2='450' y2='340' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='80' y1='350' x2='210' y2='390' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='210' y1='390' x2='340' y2='430' stroke='%23c8a951' stroke-width='0.6'/%3E%3Cline x1='450' y1='340' x2='340' y2='430' stroke='%23c8a951' stroke-width='0.6'/%3E%3C/svg%3E"); background-size: 500px 500px; }
     .hero-gradient { position: absolute; bottom: 0; left: 0; right: 0; height: 72%; background: linear-gradient(to top, rgba(8,8,8,0.93) 0%, rgba(8,8,8,0.55) 55%, transparent 100%); }
-    .hero-content { position: relative; z-index: 10; padding: 0 5rem 5rem; max-width: 860px; }
+    .hero-content { position: relative; z-index: 10; padding: 0 5rem 5rem; display: flex; align-items: flex-end; gap: 4rem; width: 100%; }
+    .hero-text { flex: 1; max-width: 580px; }
+    .hero-video { flex: 0 0 420px; opacity: 0; animation: fadeUp 0.9s 1.0s ease forwards; }
+    .hero-video iframe { width: 100%; aspect-ratio: 16/9; border: 1px solid rgba(200,169,81,0.3); display: block; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.67rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.4rem; opacity: 0; animation: fadeUp 0.9s 0.3s ease forwards; }
     .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
     .hero-title { font-family: var(--serif); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.06; color: var(--white); letter-spacing: -0.01em; margin-bottom: 1.4rem; opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards; }
@@ -187,7 +190,8 @@
     @media (max-width: 900px) {
       nav { padding: 0 1.5rem; }
       .nav-links { display: none; }
-      .hero-content { padding: 0 2rem 3.5rem; }
+      .hero-content { padding: 0 2rem 3.5rem; flex-direction: column; gap: 2rem; }
+      .hero-video { display: none; }
       .section { padding: 4rem 1.5rem; }
       .about-grid, .venue-grid, .apply-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -234,18 +238,23 @@
   <div class="hero-network"></div>
   <div class="hero-gradient"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Vanderbilt University · Data Science Institute · 2026</p>
-    <h1 class="hero-title"><strong>MaDeLaNe</strong> Workshop<br/><em>2026</em></h1>
-    <p class="hero-sub">Multi-Area · High-Density · Laminar Neurophysiology<br/>A three-day intensive workshop on state-of-the-art analysis of large-scale neural data.</p>
-    <div class="hero-pills">
-      <span class="pill"><span class="pill-icon">📅</span> June 1–3, 2026</span>
-      <span class="pill"><span class="pill-icon">📍</span> DSI · Nashville, TN</span>
-      <span class="pill"><span class="pill-icon">👥</span> ~50 Participants</span>
-      <span class="pill"><span class="pill-icon">🎓</span> PhDs &amp; Postdocs</span>
+    <div class="hero-text">
+      <p class="hero-eyebrow">Vanderbilt University · Data Science Institute · 2026</p>
+      <h1 class="hero-title"><strong>MaDeLaNe</strong> Workshop<br/><em>2026</em></h1>
+      <p class="hero-sub">Multi-Area · High-Density · Laminar Neurophysiology<br/>A three-day intensive workshop on state-of-the-art analysis of large-scale neural data.</p>
+      <div class="hero-pills">
+        <span class="pill"><span class="pill-icon">📅</span> June 1–3, 2026</span>
+        <span class="pill"><span class="pill-icon">📍</span> DSI · Nashville, TN</span>
+        <span class="pill"><span class="pill-icon">👥</span> ~50 Participants</span>
+        <span class="pill"><span class="pill-icon">🎓</span> PhDs &amp; Postdocs</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-gold" onclick="openModal()">Apply Now</button>
+        <a href="#schedule" class="btn btn-outline-white">View Schedule</a>
+      </div>
     </div>
-    <div class="hero-actions">
-      <button class="btn btn-gold" onclick="openModal()">Apply Now</button>
-      <a href="#schedule" class="btn btn-outline-white">View Schedule</a>
+    <div class="hero-video">
+      <iframe src="https://www.youtube.com/embed/vjxJ2WClBvM" title="MaDeLaNe Workshop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -466,7 +475,8 @@
     <p class="section-intro">MaDeLaNe 2026 is made possible by the generous support of our sponsors. Interested in sponsoring? Please contact the organizing team.</p>
     <div style="margin-top:2.5rem;">
       <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Brain Institute</div><div class="sponsor-type">Presenting Sponsor · Lunch Sponsor all 3 Days</div></div><a href="https://www.vanderbilt.edu/vbi/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit VBI</a></div>
-      <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Data Science Institute</div><div class="sponsor-type">Host Institution · Evening Social Sponsor</div></div><a href="https://www.vanderbilt.edu/datascience/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit DSI</a></div>
+      <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Data Science Institute</div><div class="sponsor-type">Host Institution</div></div><a href="https://www.vanderbilt.edu/datascience/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit DSI</a></div>
+      <div class="sponsor-row"><div><div class="sponsor-name">Diagnostic Biochips</div><div class="sponsor-type">Supporting Sponsor</div></div><a href="https://diagnosticbiochips.com/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit Site</a></div>
       <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Department of Psychology</div><div class="sponsor-type">Supporting Sponsor</div></div><a href="https://as.vanderbilt.edu/psychology/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit Dept.</a></div>
       <div class="sponsor-row" style="background:var(--cloud);border-style:dashed;"><div><div class="sponsor-name" style="color:var(--ash);">Become a Sponsor</div><div class="sponsor-type">Contact us to discuss 2026 sponsorship opportunities</div></div><a href="mailto:andre.bastos@vanderbilt.edu" class="btn btn-gold" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Contact Us</a></div>
     </div>
