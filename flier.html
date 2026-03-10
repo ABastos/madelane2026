@@ -45,7 +45,7 @@
     /* ── HEADER ── */
     .header {
       background: linear-gradient(155deg, #0a0a0a 0%, #1c160a 45%, #221a0c 65%, #1a1a1a 100%);
-      padding: 0.32in 0.52in 0.3in;
+      padding: 0.24in 0.5in 0.22in;
       position: relative;
       flex-shrink: 0;
     }
@@ -58,45 +58,45 @@
     .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
     .header-left { flex: 1; }
     .header-eyebrow {
-      font-size: 6.5pt;
+      font-size: 6pt;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 0.1in;
+      margin-bottom: 0.07in;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    .header-eyebrow::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--gold); }
+    .header-eyebrow::before { content: ''; display: inline-block; width: 18px; height: 1px; background: var(--gold); }
     .header-title {
       font-family: var(--serif);
-      font-size: 40pt;
+      font-size: 36pt;
       font-weight: 300;
       line-height: 1.0;
       color: var(--white);
       letter-spacing: -0.01em;
-      margin-bottom: 0.08in;
+      margin-bottom: 0.06in;
     }
     .header-title strong { font-weight: 600; }
     .header-title em { font-style: italic; color: var(--gold-lt); }
     .header-sub {
-      font-size: 8.5pt;
+      font-size: 8pt;
       font-weight: 300;
       color: rgba(255,255,255,0.6);
-      line-height: 1.6;
-      margin-bottom: 0.12in;
+      line-height: 1.5;
+      margin-bottom: 0.09in;
     }
-    .header-pills { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+    .header-pills { display: flex; flex-wrap: wrap; gap: 0.2rem; }
     .pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.28rem;
+      gap: 0.25rem;
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(200,169,81,0.35);
       color: rgba(255,255,255,0.82);
-      padding: 0.14rem 0.5rem;
-      font-size: 7pt;
+      padding: 0.1rem 0.45rem;
+      font-size: 6.5pt;
       font-weight: 500;
       letter-spacing: 0.03em;
     }
@@ -106,12 +106,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 0.4rem;
+      gap: 0.3rem;
     }
     .edition-badge {
       border: 1px solid rgba(200,169,81,0.4);
-      padding: 0.2rem 0.55rem;
-      font-size: 6.5pt;
+      padding: 0.15rem 0.5rem;
+      font-size: 6pt;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -120,8 +120,8 @@
     .free-badge {
       background: var(--gold);
       color: var(--black);
-      padding: 0.2rem 0.55rem;
-      font-size: 6.5pt;
+      padding: 0.15rem 0.5rem;
+      font-size: 6pt;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -133,63 +133,69 @@
     /* ── REGISTRATION BANNER ── */
     .reg-banner {
       background: var(--gold);
-      padding: 0.07in 0.52in;
+      padding: 0.055in 0.5in;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
       flex-shrink: 0;
     }
-    .reg-left { display: flex; align-items: center; gap: 0.5rem; }
-    .reg-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--black); flex-shrink: 0; }
-    .reg-text { font-size: 9pt; font-weight: 700; color: var(--black); letter-spacing: 0.03em; }
-    .reg-sub { font-size: 7pt; color: rgba(0,0,0,0.55); margin-left: 0.2rem; }
-    .reg-url { font-size: 10pt; font-weight: 700; color: var(--black); letter-spacing: 0.02em; text-decoration: none; border-bottom: 1.5px solid rgba(0,0,0,0.3); }
+    .reg-left { display: flex; align-items: center; gap: 0.45rem; }
+    .reg-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--black); flex-shrink: 0; }
+    .reg-text { font-size: 8.5pt; font-weight: 700; color: var(--black); letter-spacing: 0.03em; }
+    .reg-sub { font-size: 6.5pt; color: rgba(0,0,0,0.55); margin-left: 0.15rem; }
+    .reg-url { font-size: 9.5pt; font-weight: 700; color: var(--black); letter-spacing: 0.02em; text-decoration: none; border-bottom: 1.5px solid rgba(0,0,0,0.3); }
 
     /* ── BODY ── */
     .body {
       flex: 1;
       display: grid;
-      grid-template-columns: 3.15in 1fr;
-      gap: 0;
+      grid-template-columns: 3.05in 1fr;
       background: var(--border);
       min-height: 0;
+      overflow: hidden;
     }
-    .col { background: var(--white); padding: 0.22in 0.3in; display: flex; flex-direction: column; gap: 0.16in; overflow: hidden; }
+    .col {
+      background: var(--white);
+      padding: 0.17in 0.27in;
+      display: flex;
+      flex-direction: column;
+      gap: 0.13in;
+      overflow: hidden;
+    }
     .col-left { border-right: 1px solid var(--border); }
 
     .sec-label {
-      font-size: 6pt;
+      font-size: 5.5pt;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold-dk);
-      margin-bottom: 0.04in;
+      margin-bottom: 0.03in;
     }
     .sec-heading {
       font-family: var(--serif);
-      font-size: 14pt;
+      font-size: 13pt;
       font-weight: 300;
-      line-height: 1.15;
+      line-height: 1.1;
       color: var(--black);
-      margin-bottom: 0.08in;
+      margin-bottom: 0.06in;
     }
     .sec-heading em { font-style: italic; color: var(--gold-dk); }
 
     /* About */
-    .about-text { font-size: 7.5pt; line-height: 1.6; color: #333; }
-    .about-text em { font-style: italic; }
+    .about-text { font-size: 7pt; line-height: 1.55; color: #333; }
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      margin-top: 0.08in;
+      margin-top: 0.07in;
     }
-    .stat { background: var(--cream); padding: 0.08in 0.06in; text-align: center; }
-    .stat-num { font-family: var(--serif); font-size: 17pt; font-weight: 300; color: var(--black); line-height: 1; }
-    .stat-lbl { font-size: 6pt; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ash); margin-top: 0.02in; }
+    .stat { background: var(--cream); padding: 0.06in 0.05in; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 15pt; font-weight: 300; color: var(--black); line-height: 1; }
+    .stat-lbl { font-size: 5.5pt; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ash); margin-top: 0.015in; }
 
     /* Topics */
     .topics-grid {
@@ -199,18 +205,18 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .topic { background: var(--white); padding: 0.065in 0.09in; display: flex; gap: 0.3rem; align-items: flex-start; }
-    .topic-num { font-family: var(--serif); font-size: 11pt; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0; margin-top: 1px; }
-    .topic-name { font-size: 7pt; font-weight: 600; color: var(--black); line-height: 1.3; }
+    .topic { background: var(--white); padding: 0.055in 0.08in; display: flex; gap: 0.28rem; align-items: flex-start; }
+    .topic-num { font-family: var(--serif); font-size: 10pt; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .topic-name { font-size: 6.5pt; font-weight: 600; color: var(--black); line-height: 1.3; }
 
     /* Open box */
     .open-box {
       background: var(--cream);
       border: 1px solid var(--border);
       border-left: 3px solid var(--gold);
-      padding: 0.09in 0.11in;
-      font-size: 7.5pt;
-      line-height: 1.55;
+      padding: 0.07in 0.1in;
+      font-size: 7pt;
+      line-height: 1.5;
       color: #333;
     }
     .open-box strong { color: var(--black); }
@@ -223,48 +229,59 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .faculty-card { background: var(--white); padding: 0.055in 0.08in; display: flex; align-items: center; gap: 0.3rem; }
+    .faculty-card { background: var(--white); padding: 0.045in 0.07in; display: flex; align-items: center; gap: 0.28rem; }
     .faculty-init {
-      width: 24px; height: 24px;
+      width: 22px; height: 22px;
       border-radius: 50%;
       background: var(--charcoal);
       display: flex; align-items: center; justify-content: center;
       font-family: var(--serif);
-      font-size: 7pt;
+      font-size: 6.5pt;
       color: var(--gold);
       flex-shrink: 0;
       border: 1px solid #333;
     }
-    .faculty-name { font-size: 7pt; font-weight: 600; color: var(--black); line-height: 1.2; }
-    .faculty-affil { font-size: 6pt; color: var(--ash); }
+    .faculty-name { font-size: 6.5pt; font-weight: 600; color: var(--black); line-height: 1.2; }
+    .faculty-affil { font-size: 5.5pt; color: var(--ash); }
+
+    /* Sponsors line */
+    .sponsors-line {
+      margin-top: auto;
+      padding-top: 0.06in;
+      border-top: 1px solid var(--border);
+      font-size: 5.5pt;
+      color: var(--ash);
+      line-height: 1.5;
+    }
+    .sponsors-line strong { color: var(--black); font-weight: 600; }
 
     /* Schedule */
-    .day-block { margin-bottom: 0.09in; }
+    .day-block { }
     .day-title {
-      font-size: 6.5pt;
+      font-size: 6pt;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--white);
       background: var(--charcoal);
-      padding: 0.04in 0.09in;
+      padding: 0.035in 0.08in;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .day-title span { color: var(--gold-lt); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 6pt; }
+    .day-title span { color: var(--gold-lt); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 5.5pt; }
     .day-sessions { border: 1px solid var(--border); border-top: none; }
     .sesh {
       display: flex;
       align-items: flex-start;
-      padding: 0.038in 0.07in;
-      gap: 0.3rem;
+      padding: 0.032in 0.06in;
+      gap: 0.28rem;
       border-bottom: 1px solid var(--border);
-      font-size: 6.5pt;
+      font-size: 6pt;
     }
     .sesh:last-child { border-bottom: none; }
     .sesh-tag {
-      font-size: 5pt;
+      font-size: 4.5pt;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -273,29 +290,12 @@
       margin-top: 1px;
       white-space: nowrap;
     }
-    .tag-k { background: #1c160a; color: var(--gold); }
-    .tag-t { background: #f0ede6; color: #555; }
-    .tag-s { background: #eaf4ea; color: #2a6b2a; }
+    .tag-k  { background: #1c160a; color: var(--gold); }
+    .tag-t  { background: #f0ede6; color: #555; }
+    .tag-s  { background: #eaf4ea; color: #2a6b2a; }
     .tag-sp { background: #e8eaf4; color: #2a3b6b; }
-    .sesh-name { font-weight: 600; color: var(--black); line-height: 1.25; }
-    .sesh-time { color: var(--ash); font-size: 6pt; }
-    .sesh-who { color: var(--ash); font-size: 6pt; }
-
-    /* ── FOOTER ── */
-    .footer {
-      background: var(--charcoal);
-      padding: 0.09in 0.52in;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-shrink: 0;
-    }
-    .footer-brand { font-family: var(--serif); font-size: 10pt; font-weight: 300; color: var(--white); }
-    .footer-brand strong { font-weight: 600; color: var(--gold); }
-    .sponsors { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-    .sponsor-lbl { font-size: 5pt; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 0.05rem; }
-    .sponsor-name { font-size: 6pt; font-weight: 500; color: rgba(255,255,255,0.65); padding: 1px 5px; border: 1px solid rgba(255,255,255,0.15); }
+    .sesh-name { font-weight: 600; color: var(--black); line-height: 1.2; }
+    .sesh-meta { color: var(--ash); font-size: 5.5pt; line-height: 1.3; }
 
     @media print {
       body { margin: 0; }
@@ -329,7 +329,7 @@
 
   <div class="gold-rule"></div>
 
-  <!-- REGISTRATION BANNER (slim) -->
+  <!-- REGISTRATION BANNER -->
   <div class="reg-banner">
     <div class="reg-left">
       <div class="reg-dot"></div>
@@ -342,14 +342,14 @@
   <!-- BODY -->
   <div class="body">
 
-    <!-- LEFT COLUMN: About · Topics · Open box · Faculty -->
+    <!-- LEFT COLUMN -->
     <div class="col col-left">
 
       <!-- About -->
       <div>
         <div class="sec-label">About</div>
         <div class="sec-heading">Big Data in Neuroscience.<br/><em>Methods to Match.</em></div>
-        <p class="about-text"><em>MaDeLaNe</em> — <strong>Multi-Area, high-Density, Laminar Neurophysiology</strong> — is a hands-on workshop presenting state-of-the-art methods for analyzing large-scale neural data. Recent advances now permit recordings from hundreds to thousands of sites across cortical and sub-cortical areas in animal models and human patients. Participants learn through data-driven tutorials led by leading experts, covering everything from spike sorting and laminar analysis to population coding and human neurophysiology.</p>
+        <p class="about-text"><em>MaDeLaNe</em> — <strong>Multi-Area, high-Density, Laminar Neurophysiology</strong> — is a hands-on workshop presenting state-of-the-art methods for analyzing large-scale neural data. Advances in recording now permit measurements from hundreds to thousands of sites across cortical and sub-cortical areas in animal models and human patients. Participants learn through data-driven tutorials covering spike sorting, laminar analysis, population coding, and human neurophysiology.</p>
         <div class="stats-row">
           <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Days</div></div>
           <div class="stat"><div class="stat-num">~10</div><div class="stat-lbl">Tutorials</div></div>
@@ -375,7 +375,7 @@
 
       <!-- Open to all -->
       <div class="open-box">
-        <strong>Open to everyone.</strong> MaDeLaNe 2026 welcomes graduate students, postdoctoral researchers, faculty, and staff from Vanderbilt and institutions worldwide. Registration is <strong>free</strong> and space is limited — apply early at <strong>madelane.bastoslabvu.com</strong>
+        <strong>Open to everyone.</strong> MaDeLaNe 2026 welcomes graduate students, postdoctoral researchers, faculty, and staff from Vanderbilt and institutions worldwide. Registration is <strong>free</strong> — apply early at <strong>madelane.bastoslabvu.com</strong>
       </div>
 
       <!-- Faculty -->
@@ -395,9 +395,14 @@
         </div>
       </div>
 
+      <!-- Sponsors -->
+      <div class="sponsors-line">
+        <strong>Supported by:</strong> Vanderbilt Brain Institute · Vanderbilt Data Science Institute · Dept. of Psychology · Diagnostic Biochips
+      </div>
+
     </div>
 
-    <!-- RIGHT COLUMN: Full 3-day schedule -->
+    <!-- RIGHT COLUMN: Full Schedule -->
     <div class="col">
 
       <div>
@@ -407,53 +412,41 @@
 
       <!-- DAY 1 -->
       <div class="day-block">
-        <div class="day-title">Day 1 — Monday, June 1 <span>Spikes, NWB &amp; Optogenetics</span></div>
+        <div class="day-title">Day 1 — Monday, June 1 <span>Spikes · NWB · Optogenetics</span></div>
         <div class="day-sessions">
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Recording Approaches in Systems Neuroscience</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Daniel Gonzales</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spike Sorting — KIAsort, Kilosort &amp; Phy</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Kianoush Boroujeni</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Neurodata Without Borders (NWB)</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Jacob Westerberg · Tutors: Sophy Xiong, Hamed Nejat</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Optogenetics in Non-Human Primates</div><div class="sesh-time">2:40–4:00 PM</div><div class="sesh-who">Christos Constantinidis · Tutors: Rana Mozumder, Sophy Xiong</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Using MaDeLaNe to Study Predictive Processing</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Sophy Xiong</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Recording Approaches in Systems Neuroscience</div><div class="sesh-meta">9:00–10:20 AM · Daniel Gonzales</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spike Sorting — KIAsort, Kilosort &amp; Phy</div><div class="sesh-meta">10:40 AM–12:00 PM · Kianoush Boroujeni</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Neurodata Without Borders (NWB)</div><div class="sesh-meta">1:00–2:20 PM · Jacob Westerberg, Sophy Xiong, Hamed Nejat</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Optogenetics in Non-Human Primates</div><div class="sesh-meta">2:40–4:00 PM · Christos Constantinidis, Rana Mozumder, Sophy Xiong</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Using MaDeLaNe to Study Predictive Processing</div><div class="sesh-meta">4:00–5:00 PM · Sophy Xiong</div></div></div>
         </div>
       </div>
 
       <!-- DAY 2 -->
       <div class="day-block">
-        <div class="day-title">Day 2 — Tuesday, June 2 <span>Laminar Analysis &amp; Human Neurophysiology</span></div>
+        <div class="day-title">Day 2 — Tuesday, June 2 <span>Laminar Analysis · Human Neurophysiology</span></div>
         <div class="day-sessions">
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Multi-Laminar Spectral Analysis (FLIP &amp; vFLIP)</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Diego Mendoza-Halliday · Tutor: André Bastos</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Biophysical Modeling with the Genetic Stochastic Delta Rule</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Hamed Nejat · Tutor: André Bastos</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Reward Circuit Modulations in Human Intracranial EEG</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Sarah Bick</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spatial Analysis of Human Spiking Data with Utah Arrays</div><div class="sesh-time">2:40–3:40 PM</div><div class="sesh-who">Anton Sobinov</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">A Spectrolaminar Framework for Cortical Electrophysiology</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Diego Mendoza-Halliday</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-s">Social</span><div><div class="sesh-name">Evening Social — Sponsored by Diagnostic Biochips</div><div class="sesh-time">5:00–7:00 PM</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Multi-Laminar Spectral Analysis (FLIP &amp; vFLIP)</div><div class="sesh-meta">9:00–10:20 AM · Diego Mendoza-Halliday, André Bastos</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Biophysical Modeling with the Genetic Stochastic Delta Rule</div><div class="sesh-meta">10:40 AM–12:00 PM · Hamed Nejat, André Bastos</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Reward Circuit Modulations in Human Intracranial EEG</div><div class="sesh-meta">1:00–2:20 PM · Sarah Bick</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spatial Analysis of Human Spiking Data with Utah Arrays</div><div class="sesh-meta">2:40–3:40 PM · Anton Sobinov</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">A Spectrolaminar Framework for Cortical Electrophysiology</div><div class="sesh-meta">4:00–5:00 PM · Diego Mendoza-Halliday</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-s">Social</span><div><div class="sesh-name">Evening Social — Sponsored by Diagnostic Biochips</div><div class="sesh-meta">5:00–7:00 PM</div></div></div>
         </div>
       </div>
 
       <!-- DAY 3 -->
       <div class="day-block">
-        <div class="day-title">Day 3 — Wednesday, June 3 <span>Cell Classes &amp; Population Coding</span></div>
+        <div class="day-title">Day 3 — Wednesday, June 3 <span>Cell Classes · Population Coding</span></div>
         <div class="day-sessions">
-          <div class="sesh"><span class="sesh-tag tag-sp">Special</span><div><div class="sesh-name">Roundtable with Scott Imbrie (Utah Array Implantee)</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Moderated by Alex Maier, Bastos, Mendoza-Halliday, Sobinov</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Functional Cell Classes</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Kia Banaie Boroujeni</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Population Coding in Multi-Channel Human Spiking Data</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Ian Bright &amp; Kareem Zaghloul</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Coordinated Burst Spiking in Large-Scale Human Data</div><div class="sesh-time">2:40–4:00 PM</div><div class="sesh-who">Ian Bright &amp; Kareem Zaghloul</div></div></div>
-          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Neuronal Sequences in Population Bursts Encode Information in Human Cortex</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Kareem Zaghloul</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-sp">Special</span><div><div class="sesh-name">Roundtable with Scott Imbrie (Utah Array Implantee)</div><div class="sesh-meta">9:00–10:20 AM · Mod. by Maier, Bastos, Mendoza-Halliday, Sobinov</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Functional Cell Classes</div><div class="sesh-meta">10:40 AM–12:00 PM · Kia Banaie Boroujeni</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Population Coding in Multi-Channel Human Spiking Data</div><div class="sesh-meta">1:00–2:20 PM · Ian Bright &amp; Kareem Zaghloul</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Coordinated Burst Spiking in Large-Scale Human Data</div><div class="sesh-meta">2:40–4:00 PM · Ian Bright &amp; Kareem Zaghloul</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Neuronal Sequences in Population Bursts Encode Information in Human Cortex</div><div class="sesh-meta">4:00–5:00 PM · Kareem Zaghloul</div></div></div>
         </div>
       </div>
 
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-brand"><strong>MaDeLaNe</strong> Workshop 2026 · Vanderbilt University, Nashville TN · June 1–3</div>
-    <div class="sponsors">
-      <span class="sponsor-lbl">Supported by</span>
-      <span class="sponsor-name">Vanderbilt Brain Institute</span>
-      <span class="sponsor-name">Data Science Institute</span>
-      <span class="sponsor-name">Dept. of Psychology</span>
-      <span class="sponsor-name">Diagnostic Biochips</span>
     </div>
   </div>
 
