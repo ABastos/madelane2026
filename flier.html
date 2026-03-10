@@ -22,10 +22,7 @@
       --sans:    'Libre Franklin', sans-serif;
     }
 
-    @page {
-      size: letter portrait;
-      margin: 0;
-    }
+    @page { size: letter portrait; margin: 0; }
 
     html, body {
       width: 8.5in;
@@ -48,75 +45,73 @@
     /* ── HEADER ── */
     .header {
       background: linear-gradient(155deg, #0a0a0a 0%, #1c160a 45%, #221a0c 65%, #1a1a1a 100%);
-      padding: 0.45in 0.55in 0.38in;
+      padding: 0.32in 0.52in 0.3in;
       position: relative;
-      overflow: hidden;
+      flex-shrink: 0;
     }
     .header::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 600px 400px at 80% 50%, rgba(200,169,81,0.12) 0%, transparent 70%);
+      background: radial-gradient(ellipse 600px 350px at 80% 50%, rgba(200,169,81,0.11) 0%, transparent 70%);
     }
     .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
     .header-left { flex: 1; }
     .header-eyebrow {
-      font-size: 7pt;
+      font-size: 6.5pt;
       font-weight: 600;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 0.18in;
+      margin-bottom: 0.1in;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    .header-eyebrow::before { content: ''; display: inline-block; width: 22px; height: 1px; background: var(--gold); }
+    .header-eyebrow::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--gold); }
     .header-title {
       font-family: var(--serif);
-      font-size: 46pt;
+      font-size: 40pt;
       font-weight: 300;
       line-height: 1.0;
       color: var(--white);
       letter-spacing: -0.01em;
-      margin-bottom: 0.1in;
+      margin-bottom: 0.08in;
     }
     .header-title strong { font-weight: 600; }
     .header-title em { font-style: italic; color: var(--gold-lt); }
     .header-sub {
-      font-size: 9.5pt;
+      font-size: 8.5pt;
       font-weight: 300;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.7;
-      margin-bottom: 0.18in;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 0.12in;
     }
-    .header-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .header-pills { display: flex; flex-wrap: wrap; gap: 0.25rem; }
     .pill {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.28rem;
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(200,169,81,0.35);
       color: rgba(255,255,255,0.82);
-      padding: 0.18rem 0.6rem;
-      font-size: 7.5pt;
+      padding: 0.14rem 0.5rem;
+      font-size: 7pt;
       font-weight: 500;
       letter-spacing: 0.03em;
     }
     .pill-icon { color: var(--gold); }
-
     .header-right {
       flex: 0 0 auto;
-      text-align: right;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
     .edition-badge {
       border: 1px solid rgba(200,169,81,0.4);
-      padding: 0.25rem 0.6rem;
-      font-size: 7pt;
+      padding: 0.2rem 0.55rem;
+      font-size: 6.5pt;
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -125,115 +120,76 @@
     .free-badge {
       background: var(--gold);
       color: var(--black);
-      padding: 0.22rem 0.6rem;
-      font-size: 7pt;
+      padding: 0.2rem 0.55rem;
+      font-size: 6.5pt;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     /* ── GOLD RULE ── */
-    .gold-rule { height: 2px; background: linear-gradient(to right, var(--gold), var(--gold-lt), var(--gold)); }
+    .gold-rule { height: 2px; background: linear-gradient(to right, var(--gold), var(--gold-lt), var(--gold)); flex-shrink: 0; }
 
     /* ── REGISTRATION BANNER ── */
     .reg-banner {
       background: var(--gold);
-      padding: 0.15in 0.55in;
+      padding: 0.07in 0.52in;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-    }
-    .reg-left {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .reg-dot {
-      width: 9px; height: 9px;
-      border-radius: 50%;
-      background: var(--black);
-      animation: none;
       flex-shrink: 0;
     }
-    .reg-text {
-      font-size: 10pt;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: 0.04em;
-    }
-    .reg-sub {
-      font-size: 8pt;
-      color: rgba(0,0,0,0.6);
-      font-weight: 400;
-    }
-    .reg-url {
-      font-size: 11pt;
-      font-weight: 700;
-      color: var(--black);
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      border-bottom: 2px solid rgba(0,0,0,0.3);
-      padding-bottom: 1px;
-    }
+    .reg-left { display: flex; align-items: center; gap: 0.5rem; }
+    .reg-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--black); flex-shrink: 0; }
+    .reg-text { font-size: 9pt; font-weight: 700; color: var(--black); letter-spacing: 0.03em; }
+    .reg-sub { font-size: 7pt; color: rgba(0,0,0,0.55); margin-left: 0.2rem; }
+    .reg-url { font-size: 10pt; font-weight: 700; color: var(--black); letter-spacing: 0.02em; text-decoration: none; border-bottom: 1.5px solid rgba(0,0,0,0.3); }
 
     /* ── BODY ── */
-    .body { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--border); border-top: none; }
-    .col { background: var(--white); padding: 0.28in 0.38in; display: flex; flex-direction: column; gap: 0.22in; }
-    .col:first-child { border-right: 1px solid var(--border); }
+    .body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 3.15in 1fr;
+      gap: 0;
+      background: var(--border);
+      min-height: 0;
+    }
+    .col { background: var(--white); padding: 0.22in 0.3in; display: flex; flex-direction: column; gap: 0.16in; overflow: hidden; }
+    .col-left { border-right: 1px solid var(--border); }
 
-    .section-label {
-      font-size: 6.5pt;
+    .sec-label {
+      font-size: 6pt;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold-dk);
-      margin-bottom: 0.06in;
+      margin-bottom: 0.04in;
     }
-    .section-heading {
+    .sec-heading {
       font-family: var(--serif);
-      font-size: 16pt;
+      font-size: 14pt;
       font-weight: 300;
       line-height: 1.15;
       color: var(--black);
-      margin-bottom: 0.1in;
+      margin-bottom: 0.08in;
     }
-    .section-heading em { font-style: italic; color: var(--gold-dk); }
+    .sec-heading em { font-style: italic; color: var(--gold-dk); }
 
     /* About */
-    .about-text {
-      font-size: 8pt;
-      line-height: 1.65;
-      color: #333;
-    }
+    .about-text { font-size: 7.5pt; line-height: 1.6; color: #333; }
+    .about-text em { font-style: italic; }
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      margin-top: 0.1in;
+      margin-top: 0.08in;
     }
-    .stat {
-      background: var(--cream);
-      padding: 0.12in 0.1in;
-      text-align: center;
-    }
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 20pt;
-      font-weight: 300;
-      color: var(--black);
-      line-height: 1;
-    }
-    .stat-lbl {
-      font-size: 6.5pt;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ash);
-      margin-top: 0.04in;
-    }
+    .stat { background: var(--cream); padding: 0.08in 0.06in; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 17pt; font-weight: 300; color: var(--black); line-height: 1; }
+    .stat-lbl { font-size: 6pt; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ash); margin-top: 0.02in; }
 
     /* Topics */
     .topics-grid {
@@ -243,67 +199,21 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .topic {
-      background: var(--white);
-      padding: 0.1in 0.12in;
-      display: flex;
-      gap: 0.35rem;
-      align-items: flex-start;
-    }
-    .topic-num {
-      font-family: var(--serif);
-      font-size: 13pt;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .topic-name {
-      font-size: 7.5pt;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.35;
-    }
+    .topic { background: var(--white); padding: 0.065in 0.09in; display: flex; gap: 0.3rem; align-items: flex-start; }
+    .topic-num { font-family: var(--serif); font-size: 11pt; font-weight: 300; color: var(--gold); line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .topic-name { font-size: 7pt; font-weight: 600; color: var(--black); line-height: 1.3; }
 
-    /* Schedule */
-    .day-block { margin-bottom: 0.1in; }
-    .day-title {
-      font-size: 7pt;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--white);
-      background: var(--charcoal);
-      padding: 0.05in 0.1in;
-      display: flex;
-      justify-content: space-between;
+    /* Open box */
+    .open-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 0.09in 0.11in;
+      font-size: 7.5pt;
+      line-height: 1.55;
+      color: #333;
     }
-    .day-title span { color: var(--gold); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 6.5pt; }
-    .day-sessions { border: 1px solid var(--border); border-top: none; }
-    .sesh {
-      display: flex;
-      align-items: flex-start;
-      padding: 0.05in 0.08in;
-      gap: 0.4rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 7pt;
-    }
-    .sesh:last-child { border-bottom: none; }
-    .sesh-tag {
-      font-size: 5.5pt;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 1px 4px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .tag-k { background: #1c160a; color: var(--gold); }
-    .tag-t { background: #f0ede6; color: #555; }
-    .tag-s { background: #eaf4ea; color: #2a6b2a; }
-    .sesh-name { font-weight: 600; color: var(--black); line-height: 1.3; }
-    .sesh-who { color: var(--ash); font-size: 6.5pt; }
+    .open-box strong { color: var(--black); }
 
     /* Faculty */
     .faculty-grid {
@@ -313,76 +223,79 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .faculty-card {
-      background: var(--white);
-      padding: 0.08in 0.1in;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
+    .faculty-card { background: var(--white); padding: 0.055in 0.08in; display: flex; align-items: center; gap: 0.3rem; }
     .faculty-init {
-      width: 28px; height: 28px;
+      width: 24px; height: 24px;
       border-radius: 50%;
       background: var(--charcoal);
       display: flex; align-items: center; justify-content: center;
       font-family: var(--serif);
-      font-size: 8pt;
+      font-size: 7pt;
       color: var(--gold);
       flex-shrink: 0;
       border: 1px solid #333;
     }
-    .faculty-name { font-size: 7.5pt; font-weight: 600; color: var(--black); line-height: 1.25; }
-    .faculty-affil { font-size: 6.5pt; color: var(--ash); }
+    .faculty-name { font-size: 7pt; font-weight: 600; color: var(--black); line-height: 1.2; }
+    .faculty-affil { font-size: 6pt; color: var(--ash); }
 
-    /* Open to all */
-    .open-box {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--gold);
-      padding: 0.12in 0.14in;
-      font-size: 8pt;
-      line-height: 1.6;
-      color: #333;
+    /* Schedule */
+    .day-block { margin-bottom: 0.09in; }
+    .day-title {
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--charcoal);
+      padding: 0.04in 0.09in;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .open-box strong { color: var(--black); }
+    .day-title span { color: var(--gold-lt); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 6pt; }
+    .day-sessions { border: 1px solid var(--border); border-top: none; }
+    .sesh {
+      display: flex;
+      align-items: flex-start;
+      padding: 0.038in 0.07in;
+      gap: 0.3rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 6.5pt;
+    }
+    .sesh:last-child { border-bottom: none; }
+    .sesh-tag {
+      font-size: 5pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 1px 3px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+    .tag-k { background: #1c160a; color: var(--gold); }
+    .tag-t { background: #f0ede6; color: #555; }
+    .tag-s { background: #eaf4ea; color: #2a6b2a; }
+    .tag-sp { background: #e8eaf4; color: #2a3b6b; }
+    .sesh-name { font-weight: 600; color: var(--black); line-height: 1.25; }
+    .sesh-time { color: var(--ash); font-size: 6pt; }
+    .sesh-who { color: var(--ash); font-size: 6pt; }
 
     /* ── FOOTER ── */
     .footer {
       background: var(--charcoal);
-      padding: 0.12in 0.55in;
+      padding: 0.09in 0.52in;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      flex-shrink: 0;
     }
-    .footer-brand {
-      font-family: var(--serif);
-      font-size: 11pt;
-      font-weight: 300;
-      color: var(--white);
-    }
+    .footer-brand { font-family: var(--serif); font-size: 10pt; font-weight: 300; color: var(--white); }
     .footer-brand strong { font-weight: 600; color: var(--gold); }
-    .sponsors {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-    .sponsor-lbl {
-      font-size: 5.5pt;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-right: 0.1rem;
-    }
-    .sponsor-name {
-      font-size: 6.5pt;
-      font-weight: 500;
-      color: rgba(255,255,255,0.65);
-      padding: 2px 6px;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
+    .sponsors { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .sponsor-lbl { font-size: 5pt; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-right: 0.05rem; }
+    .sponsor-name { font-size: 6pt; font-weight: 500; color: rgba(255,255,255,0.65); padding: 1px 5px; border: 1px solid rgba(255,255,255,0.15); }
 
     @media print {
       body { margin: 0; }
@@ -404,7 +317,7 @@
           <span class="pill"><span class="pill-icon">📅</span> June 1–3, 2026</span>
           <span class="pill"><span class="pill-icon">📍</span> DSI · Nashville, TN</span>
           <span class="pill"><span class="pill-icon">👥</span> ~50 Participants</span>
-          <span class="pill"><span class="pill-icon">🎓</span> Open to All</span>
+          <span class="pill"><span class="pill-icon">🎓</span> Open to All · Free</span>
         </div>
       </div>
       <div class="header-right">
@@ -416,31 +329,27 @@
 
   <div class="gold-rule"></div>
 
-  <!-- REGISTRATION BANNER -->
+  <!-- REGISTRATION BANNER (slim) -->
   <div class="reg-banner">
     <div class="reg-left">
       <div class="reg-dot"></div>
-      <div>
-        <div class="reg-text">Registration Now Open</div>
-        <div class="reg-sub">Open to all — internal and external to Vanderbilt University</div>
-      </div>
+      <span class="reg-text">Registration Now Open</span>
+      <span class="reg-sub">— Open to all, internal and external to Vanderbilt University</span>
     </div>
-    <div>
-      <a class="reg-url" href="https://madelane.bastoslabvu.com">madelane.bastoslabvu.com</a>
-    </div>
+    <a class="reg-url" href="https://madelane.bastoslabvu.com">madelane.bastoslabvu.com</a>
   </div>
 
   <!-- BODY -->
   <div class="body">
 
-    <!-- LEFT COLUMN -->
-    <div class="col">
+    <!-- LEFT COLUMN: About · Topics · Open box · Faculty -->
+    <div class="col col-left">
 
       <!-- About -->
       <div>
-        <div class="section-label">About</div>
-        <div class="section-heading">Big Data in Neuroscience.<br/><em>Methods to Match.</em></div>
-        <p class="about-text">Recent advances in recording now permit researchers to measure from hundreds to thousands of sites across cortical and sub-cortical areas in animal models and human patients. MaDeLaNe presents the latest state-of-the-art answers to analyzing these datasets — from spike sorting and laminar analysis to population coding and human neurophysiology. Participants learn through hands-on, data-driven tutorials led by leading experts.</p>
+        <div class="sec-label">About</div>
+        <div class="sec-heading">Big Data in Neuroscience.<br/><em>Methods to Match.</em></div>
+        <p class="about-text"><em>MaDeLaNe</em> — <strong>Multi-Area, high-Density, Laminar Neurophysiology</strong> — is a hands-on workshop presenting state-of-the-art methods for analyzing large-scale neural data. Recent advances now permit recordings from hundreds to thousands of sites across cortical and sub-cortical areas in animal models and human patients. Participants learn through data-driven tutorials led by leading experts, covering everything from spike sorting and laminar analysis to population coding and human neurophysiology.</p>
         <div class="stats-row">
           <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">Days</div></div>
           <div class="stat"><div class="stat-num">~10</div><div class="stat-lbl">Tutorials</div></div>
@@ -450,8 +359,8 @@
 
       <!-- Topics -->
       <div>
-        <div class="section-label">Curriculum</div>
-        <div class="section-heading">What You Will Learn</div>
+        <div class="sec-label">Curriculum</div>
+        <div class="sec-heading">What You Will Learn</div>
         <div class="topics-grid">
           <div class="topic"><div class="topic-num">01</div><div class="topic-name">Recording Approaches</div></div>
           <div class="topic"><div class="topic-num">02</div><div class="topic-name">Spike Sorting</div></div>
@@ -466,51 +375,12 @@
 
       <!-- Open to all -->
       <div class="open-box">
-        <strong>Open to everyone.</strong> MaDeLaNe 2026 welcomes graduate students, postdoctoral researchers, faculty, and staff from Vanderbilt and institutions worldwide. Registration is <strong>free</strong>. Space is limited to ~50 participants — apply early at <strong>madelane.bastoslabvu.com</strong>
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="col">
-
-      <!-- Schedule highlights -->
-      <div>
-        <div class="section-label">3-Day Program</div>
-        <div class="section-heading">Schedule Highlights</div>
-
-        <div class="day-block">
-          <div class="day-title">Day 1 — Monday, June 1 <span>Spikes, NWB &amp; Optogenetics</span></div>
-          <div class="day-sessions">
-            <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Recording Approaches · Spike Sorting · NWB</div><div class="sesh-who">Gonzales · Boroujeni · Westerberg</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Optogenetics in Non-Human Primates</div><div class="sesh-who">Constantinidis</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Using MaDeLaNe to Study Predictive Processing</div><div class="sesh-who">Sophy Xiong</div></div></div>
-          </div>
-        </div>
-
-        <div class="day-block">
-          <div class="day-title">Day 2 — Tuesday, June 2 <span>Laminar Analysis &amp; Human Data</span></div>
-          <div class="day-sessions">
-            <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Multi-Laminar Spectral Analysis · Biophysical Modeling</div><div class="sesh-who">Mendoza-Halliday · Nejat</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Human iEEG &amp; Utah Array Data</div><div class="sesh-who">Bick · Sobinov</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">A Spectrolaminar Framework for Cortical Electrophysiology</div><div class="sesh-who">Diego Mendoza-Halliday</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-s">Social</span><div><div class="sesh-name">Evening Social — Hosted by Diagnostic Biochips</div></div></div>
-          </div>
-        </div>
-
-        <div class="day-block">
-          <div class="day-title">Day 3 — Wednesday, June 3 <span>Cell Classes &amp; Population Coding</span></div>
-          <div class="day-sessions">
-            <div class="sesh"><span class="sesh-tag tag-s">Special</span><div><div class="sesh-name">Roundtable with Scott Imbrie (Utah Array Implantee)</div><div class="sesh-who">Mod. by Alex Maier</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Functional Cell Classes · Population Coding</div><div class="sesh-who">Banaie Boroujeni · Bright · Zaghloul</div></div></div>
-            <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Neuronal Sequences in Population Bursts Encode Information</div><div class="sesh-who">Kareem Zaghloul</div></div></div>
-          </div>
-        </div>
+        <strong>Open to everyone.</strong> MaDeLaNe 2026 welcomes graduate students, postdoctoral researchers, faculty, and staff from Vanderbilt and institutions worldwide. Registration is <strong>free</strong> and space is limited — apply early at <strong>madelane.bastoslabvu.com</strong>
       </div>
 
       <!-- Faculty -->
       <div>
-        <div class="section-label">Workshop Faculty</div>
+        <div class="sec-label">Workshop Faculty</div>
         <div class="faculty-grid">
           <div class="faculty-card"><div class="faculty-init">AB</div><div><div class="faculty-name">André Bastos, PhD</div><div class="faculty-affil">Vanderbilt · Organizer</div></div></div>
           <div class="faculty-card"><div class="faculty-init">DM</div><div><div class="faculty-name">Diego Mendoza-Halliday, PhD</div><div class="faculty-affil">Univ. of Pittsburgh</div></div></div>
@@ -522,6 +392,53 @@
           <div class="faculty-card"><div class="faculty-init">JW</div><div><div class="faculty-name">Jacob Westerberg, PhD</div><div class="faculty-affil">Netherlands Inst. Neurosci.</div></div></div>
           <div class="faculty-card"><div class="faculty-init">AS</div><div><div class="faculty-name">Anton Sobinov, PhD</div><div class="faculty-affil">Univ. of Chicago</div></div></div>
           <div class="faculty-card"><div class="faculty-init">KBB</div><div><div class="faculty-name">Kia Banaie Boroujeni, PhD</div><div class="faculty-affil">Princeton University</div></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Full 3-day schedule -->
+    <div class="col">
+
+      <div>
+        <div class="sec-label">3-Day Program</div>
+        <div class="sec-heading">Full Schedule · 9 AM – 5 PM Daily</div>
+      </div>
+
+      <!-- DAY 1 -->
+      <div class="day-block">
+        <div class="day-title">Day 1 — Monday, June 1 <span>Spikes, NWB &amp; Optogenetics</span></div>
+        <div class="day-sessions">
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Recording Approaches in Systems Neuroscience</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Daniel Gonzales</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spike Sorting — KIAsort, Kilosort &amp; Phy</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Kianoush Boroujeni</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Neurodata Without Borders (NWB)</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Jacob Westerberg · Tutors: Sophy Xiong, Hamed Nejat</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Optogenetics in Non-Human Primates</div><div class="sesh-time">2:40–4:00 PM</div><div class="sesh-who">Christos Constantinidis · Tutors: Rana Mozumder, Sophy Xiong</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Using MaDeLaNe to Study Predictive Processing</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Sophy Xiong</div></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-block">
+        <div class="day-title">Day 2 — Tuesday, June 2 <span>Laminar Analysis &amp; Human Neurophysiology</span></div>
+        <div class="day-sessions">
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Multi-Laminar Spectral Analysis (FLIP &amp; vFLIP)</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Diego Mendoza-Halliday · Tutor: André Bastos</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Biophysical Modeling with the Genetic Stochastic Delta Rule</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Hamed Nejat · Tutor: André Bastos</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Reward Circuit Modulations in Human Intracranial EEG</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Sarah Bick</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Spatial Analysis of Human Spiking Data with Utah Arrays</div><div class="sesh-time">2:40–3:40 PM</div><div class="sesh-who">Anton Sobinov</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">A Spectrolaminar Framework for Cortical Electrophysiology</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Diego Mendoza-Halliday</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-s">Social</span><div><div class="sesh-name">Evening Social — Sponsored by Diagnostic Biochips</div><div class="sesh-time">5:00–7:00 PM</div></div></div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day-block">
+        <div class="day-title">Day 3 — Wednesday, June 3 <span>Cell Classes &amp; Population Coding</span></div>
+        <div class="day-sessions">
+          <div class="sesh"><span class="sesh-tag tag-sp">Special</span><div><div class="sesh-name">Roundtable with Scott Imbrie (Utah Array Implantee)</div><div class="sesh-time">9:00–10:20 AM</div><div class="sesh-who">Moderated by Alex Maier, Bastos, Mendoza-Halliday, Sobinov</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Functional Cell Classes</div><div class="sesh-time">10:40 AM–12:00 PM</div><div class="sesh-who">Kia Banaie Boroujeni</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Population Coding in Multi-Channel Human Spiking Data</div><div class="sesh-time">1:00–2:20 PM</div><div class="sesh-who">Ian Bright &amp; Kareem Zaghloul</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-t">Tutorial</span><div><div class="sesh-name">Coordinated Burst Spiking in Large-Scale Human Data</div><div class="sesh-time">2:40–4:00 PM</div><div class="sesh-who">Ian Bright &amp; Kareem Zaghloul</div></div></div>
+          <div class="sesh"><span class="sesh-tag tag-k">Keynote</span><div><div class="sesh-name">Neuronal Sequences in Population Bursts Encode Information in Human Cortex</div><div class="sesh-time">4:00–5:00 PM</div><div class="sesh-who">Kareem Zaghloul</div></div></div>
         </div>
       </div>
 
