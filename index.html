@@ -195,6 +195,7 @@
       .hero-video { display: none; }
       .section { padding: 4rem 1.5rem; }
       .about-grid, .venue-grid, .apply-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .participants-two-col { grid-template-columns: 1fr !important; }
       .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
       .form-row { grid-template-columns: 1fr; }
@@ -229,6 +230,7 @@
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#speakers">Faculty</a></li>
     <li><a href="#venue">Venue</a></li>
+    <li><a href="#participants">Participants</a></li>
     <li><a href="#apply" class="nav-cta-link" onclick="openModal();return false;">Apply</a></li>
   </ul>
 </nav>
@@ -480,6 +482,55 @@
       <div class="sponsor-row"><div><div class="sponsor-name">Vanderbilt Department of Psychology</div><div class="sponsor-type">Supporting Sponsor</div></div><a href="https://as.vanderbilt.edu/psychology/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit Dept.</a></div>
       <div class="sponsor-row"><div><div class="sponsor-name">Diagnostic Biochips</div><div class="sponsor-type">Evening Social Sponsor</div></div><a href="https://diagnosticbiochips.com/" target="_blank" class="btn btn-outline-dark" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Visit Site</a></div>
       <div class="sponsor-row" style="background:var(--cloud);border-style:dashed;"><div><div class="sponsor-name" style="color:var(--ash);">Become a Sponsor</div><div class="sponsor-type">Contact us to discuss 2026 sponsorship opportunities</div></div><a href="mailto:andre.bastos@vanderbilt.edu" class="btn btn-gold" style="font-size:0.65rem;padding:0.6rem 1.2rem;">Contact Us</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTICIPANTS -->
+<div class="gold-rule" style="opacity:0.3;"></div>
+<section id="participants" style="background:var(--section-bg);">
+  <div class="section">
+    <p class="section-label">2026 Cohort</p>
+    <h2 class="section-heading">Participants</h2>
+    <p class="section-intro" style="max-width:680px;">MaDeLaNe 2026 brings together 50 participants spanning advanced undergraduates to faculty, drawn from institutions across the United States and internationally. The visualizations below summarize the cohort's composition, research backgrounds, and learning goals.</p>
+
+    <div style="margin-top:3.5rem; display:flex; flex-direction:column; gap:3.5rem;">
+
+      <!-- Dashboard -->
+      <div>
+        <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:0.75rem;">Population Summary</p>
+        <h3 style="font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--black);margin-bottom:1.25rem;">Career stage, institutions, geography, backgrounds &amp; skills</h3>
+        <div style="border:1px solid var(--border);overflow:hidden;">
+          <img src="images/participants_dashboard.png"
+               alt="MaDeLaNe 2026 participant summary dashboard showing career stage breakdown, top institutions, geographic origins, prior experience areas, skills applicants want to learn, and programming tools"
+               style="width:100%;display:block;">
+        </div>
+      </div>
+
+      <!-- Two-column: Venn + Wordcloud -->
+      <div class="participants-two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+
+        <div>
+          <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:0.75rem;">Research Background Overlap</p>
+          <h3 style="font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--black);margin-bottom:1.25rem;">EEG · NHP Ephys · Computational</h3>
+          <div style="border:1px solid var(--border);overflow:hidden;">
+            <img src="images/participants_venn.png"
+                 alt="Venn diagram showing overlap between participants with EEG/human iEEG, NHP/in-vivo ephys, and computational/ML backgrounds"
+                 style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <div>
+          <p style="font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:0.75rem;">Learning Goals</p>
+          <h3 style="font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--black);margin-bottom:1.25rem;">What participants want to learn</h3>
+          <div style="border:1px solid var(--border);overflow:hidden;">
+            <img src="images/participants_wordcloud.png"
+                 alt="Word cloud of MaDeLaNe 2026 participant learning goals, with spike sorting, laminar analysis, population coding, and optogenetics among the most prominent themes"
+                 style="width:100%;display:block;">
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
