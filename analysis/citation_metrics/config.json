@@ -1,0 +1,57 @@
+{
+  "focal_author": {
+    "name": "Andre M. Bastos",
+    "search_names": ["Andre M. Bastos", "André M. Bastos", "Andre Moraes Bastos", "Andre Bastos"],
+    "institution": "Vanderbilt University",
+    "openalex_ids": [],
+    "google_scholar_id": "o0-TBrMAAAAJ",
+    "scholar_manual": {
+      "citations": null,
+      "h_index": null,
+      "first_pub_year": null,
+      "note": "Optional: paste the 'All' citations / h-index from your Google Scholar profile. Reported alongside, never mixed into the OpenAlex cohort comparison."
+    }
+  },
+
+  "fields": ["Neuroscience", "Psychology"],
+  "min_field_share": 0.4,
+  "min_works": 20,
+  "min_career_age": 8,
+  "career_age_band": 5,
+
+  "groups": {
+    "Vanderbilt": [
+      {"name": "Vanderbilt University"},
+      {"name": "Vanderbilt University Medical Center"}
+    ],
+    "Peer institutions": [
+      {"name": "Duke University"},
+      {"name": "Emory University"},
+      {"name": "Washington University in St. Louis"},
+      {"name": "Northwestern University"},
+      {"name": "University of Chicago"},
+      {"name": "Brown University"},
+      {"name": "Rice University"},
+      {"name": "Dartmouth College"}
+    ],
+    "Top institutions": [
+      {"name": "Massachusetts Institute of Technology"},
+      {"name": "Harvard University"},
+      {"name": "Stanford University"},
+      {"name": "Princeton University"},
+      {"name": "Yale University"},
+      {"name": "Columbia University"},
+      {"name": "New York University"},
+      {"name": "University of California, Berkeley"},
+      {"name": "University of California, San Francisco"},
+      {"name": "Johns Hopkins University"},
+      {"name": "University of Pennsylvania"},
+      {"name": "California Institute of Technology"}
+    ]
+  },
+
+  "rosters": {
+    "_comment": "Optional curated comparisons. Map a label to a list of {name, institution} or {openalex_id}. Use this for exact department colleague lists (e.g., Vanderbilt Psychology / Neuroscience faculty pages), which the automatic field cohort can only approximate.",
+    "Vanderbilt colleagues (curated)": []
+  }
+}
