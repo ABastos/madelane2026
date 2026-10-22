@@ -1,0 +1,80 @@
+{
+  "data": "SIMULATED laminar data",
+  "n_trials": 120,
+  "n_channels": 16,
+  "intdist_mm": 0.15,
+  "fsample": 1000,
+  "band_profiles": {
+    "Delta-Theta (1-6 Hz)": [
+      0.092,
+      0.144,
+      0.2,
+      0.206,
+      0.139,
+      0.058,
+      0.03,
+      0.064,
+      0.164,
+      0.39,
+      0.739,
+      0.993,
+      0.979,
+      0.789,
+      0.524,
+      0.376
+    ],
+    "Alpha-Beta (10-20 Hz)": [
+      0.01,
+      0.014,
+      0.021,
+      0.026,
+      0.024,
+      0.018,
+      0.024,
+      0.068,
+      0.187,
+      0.434,
+      0.773,
+      0.988,
+      0.957,
+      0.743,
+      0.474,
+      0.354
+    ],
+    "Gamma (70-100 Hz)": [
+      0.661,
+      0.771,
+      0.967,
+      0.972,
+      0.702,
+      0.355,
+      0.129,
+      0.037,
+      0.02,
+      0.033,
+      0.055,
+      0.073,
+      0.075,
+      0.057,
+      0.037,
+      0.028
+    ]
+  },
+  "vflip2": {
+    "goodnessvalue": 0.7534228646973811,
+    "startinglowfreq": 5,
+    "endinglowfreq": 49,
+    "startinghighfreq": 50,
+    "endinghighfreq": 149,
+    "proximalchannel": 2,
+    "distalchannel": 13,
+    "lowfreqmaxchannel": 12,
+    "highfreqmaxchannel": 3,
+    "crossoverchannel": 8,
+    "omega": 13.622868339411745
+  },
+  "csd": {
+    "earliest_sink_channel_30_80ms": 8,
+    "planted_L4_sink_channel": 8
+  }
+}

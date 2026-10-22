@@ -1,0 +1,12 @@
+{
+  "n_neurons": 100,
+  "total_spikes": 22513,
+  "weighted_ppc_peak_hz": 36,
+  "weighted_ppc_peak": 0.010219883045526687,
+  "thresh_ppc_peak_hz": 36,
+  "sfc_peak_hz": 38.0,
+  "sfc_peak": 0.04216107869719907,
+  "example_neuron": 39,
+  "example_rayleigh_p_40hz": 2.8780401481374754e-07,
+  "n_neurons_ge50_spikes": 67
+}

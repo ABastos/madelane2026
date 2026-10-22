@@ -1,0 +1,321 @@
+{
+  "source": "Box: 'MaDeLaNe Workshop' (2024), 'MaDeLaNe 2025', 'MaDeLaNe 2026' tutorial folders",
+  "stages": [
+    {
+      "id": "acquire",
+      "label": "Acquire",
+      "sub": "recording & perturbation"
+    },
+    {
+      "id": "standardize",
+      "label": "Standardize",
+      "sub": "NWB data format"
+    },
+    {
+      "id": "sort",
+      "label": "Spike sort",
+      "sub": "units from voltage"
+    },
+    {
+      "id": "lfp",
+      "label": "Laminar LFP",
+      "sub": "depth & rhythms"
+    },
+    {
+      "id": "cells",
+      "label": "Cell classes",
+      "sub": "who is firing"
+    },
+    {
+      "id": "population",
+      "label": "Populations",
+      "sub": "states & codes"
+    },
+    {
+      "id": "interaction",
+      "label": "Interactions",
+      "sub": "coupling & direction"
+    },
+    {
+      "id": "model",
+      "label": "Models",
+      "sub": "mechanism"
+    }
+  ],
+  "workflows": [
+    {
+      "stage": "acquire",
+      "topic": "Recording approaches",
+      "lead": "Gonzales",
+      "tools": "lecture",
+      "years": [
+        2026
+      ],
+      "box": "2026/Recording Approaches in Systems Neuroscience"
+    },
+    {
+      "stage": "acquire",
+      "topic": "Hardware blitz",
+      "lead": "Neuropixels, wireless multi-area, Allen",
+      "tools": "slides",
+      "years": [
+        2024
+      ],
+      "box": "2024/Hardware Blitz"
+    },
+    {
+      "stage": "acquire",
+      "topic": "Optogenetics & optotagging",
+      "lead": "Constantinidis, Mozumder",
+      "tools": "MATLAB, SALT test",
+      "years": [
+        2026
+      ],
+      "box": "2026/Optogenetics in Non-Human Primates"
+    },
+    {
+      "stage": "standardize",
+      "topic": "Neurodata Without Borders",
+      "lead": "Westerberg",
+      "tools": "MATLAB matnwb",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "box": "Westerberg - NWB; NWB - Westerberg; madelane_nwb_workshop"
+    },
+    {
+      "stage": "sort",
+      "topic": "Kilosort + Phy",
+      "lead": "Abbaspoor",
+      "tools": "Kilosort 1, Phy",
+      "years": [
+        2024,
+        2025
+      ],
+      "box": "Abbaspoor - Spike Sorting; Spike Sorting I - Abbaspoor"
+    },
+    {
+      "stage": "sort",
+      "topic": "KIASort",
+      "lead": "Banaie Boroujeni",
+      "tools": "MATLAB",
+      "years": [
+        2025,
+        2026
+      ],
+      "box": "Spike Sorting II - Boroujeni; Spike_Sorting_KIASort_Kia"
+    },
+    {
+      "stage": "lfp",
+      "topic": "LFP & CSD",
+      "lead": "Maier",
+      "tools": "MATLAB",
+      "years": [
+        2024
+      ],
+      "ran": true,
+      "box": "Maier - LFP and CSD/CSDanalysis.m"
+    },
+    {
+      "stage": "lfp",
+      "topic": "Spectrolaminar FLIP → vFLIP2",
+      "lead": "Bastos; Mendoza-Halliday",
+      "tools": "MATLAB",
+      "years": [
+        2024,
+        2026
+      ],
+      "ran": true,
+      "box": "Bastos - Spectrolaminar motif and FLIP; Multi-Laminar Spectral Analysis"
+    },
+    {
+      "stage": "lfp",
+      "topic": "LFP burst detection",
+      "lead": "Womelsdorf",
+      "tools": "wlBurst v2, FieldTrip",
+      "years": [
+        2024
+      ],
+      "box": "Womelsdorf - Frequency Analysis"
+    },
+    {
+      "stage": "cells",
+      "topic": "Cell clustering & circuits",
+      "lead": "Abbaspoor",
+      "tools": "MATLAB",
+      "years": [
+        2024
+      ],
+      "box": "Abbaspoor - Cell clustering"
+    },
+    {
+      "stage": "cells",
+      "topic": "WaveMAP",
+      "lead": "Lee",
+      "tools": "Python / Colab, UMAP",
+      "years": [
+        2025,
+        2026
+      ],
+      "box": "WaveMAP - Lee; PhysMAP and WaveMAP"
+    },
+    {
+      "stage": "cells",
+      "topic": "PhysMAP (multi-modal)",
+      "lead": "Lee",
+      "tools": "Python / Colab",
+      "years": [
+        2025,
+        2026
+      ],
+      "box": "PhysMAP - Lee; PhysMAP and WaveMAP"
+    },
+    {
+      "stage": "cells",
+      "topic": "Transcriptomic cell classes",
+      "lead": "Chandrasekaran",
+      "tools": "Allen data",
+      "years": [
+        2025
+      ],
+      "box": "Transcriptomic Cell Classes - Chandrasekaran"
+    },
+    {
+      "stage": "cells",
+      "topic": "Functional e-types (CV/LV)",
+      "lead": "Banaie Boroujeni",
+      "tools": "Python, Izhikevich",
+      "years": [
+        2026
+      ],
+      "box": "Functional_cell_types_eTyping_Kia"
+    },
+    {
+      "stage": "population",
+      "topic": "Ensemble repr. space",
+      "lead": "Hoffman",
+      "tools": "Python / Colab",
+      "years": [
+        2024
+      ],
+      "box": "Hoffman - spiking ensembles"
+    },
+    {
+      "stage": "population",
+      "topic": "Hidden Markov models",
+      "lead": "Abbaspoor",
+      "tools": "Python, Poisson HMM",
+      "years": [
+        2025
+      ],
+      "box": "Hidden Markov Models - Abbaspoor"
+    },
+    {
+      "stage": "population",
+      "topic": "Dimensionality reduction",
+      "lead": "Rahman",
+      "tools": "GitHub",
+      "years": [
+        2025
+      ],
+      "box": "Dimensionality Reduction - Rahman"
+    },
+    {
+      "stage": "population",
+      "topic": "Population coding (human)",
+      "lead": "Bright & Zaghloul",
+      "tools": "MATLAB live script",
+      "years": [
+        2026
+      ],
+      "box": "Population Coding in Multi-Channel Human Spiking Data"
+    },
+    {
+      "stage": "population",
+      "topic": "Burst spike sequences (human)",
+      "lead": "Bright & Zaghloul",
+      "tools": "MATLAB live script",
+      "years": [
+        2026
+      ],
+      "box": "Coordinated Burst Spiking in Large-Scale Human Data"
+    },
+    {
+      "stage": "population",
+      "topic": "Utah-array somatotopy",
+      "lead": "Sobinov",
+      "tools": "Python + MATLAB",
+      "years": [
+        2026
+      ],
+      "box": "Spatial Analysis of Human Spiking Data with Utah Arrays"
+    },
+    {
+      "stage": "interaction",
+      "topic": "Coherence & Granger",
+      "lead": "Bastos",
+      "tools": "FieldTrip simulations",
+      "years": [
+        2024,
+        2025
+      ],
+      "ran": true,
+      "box": "Bastos - Functional Connectivity; Functional Connectivity - Bastos"
+    },
+    {
+      "stage": "interaction",
+      "topic": "Spike-field PPC",
+      "lead": "Vinck",
+      "tools": "FieldTrip",
+      "years": [
+        2024,
+        2025
+      ],
+      "ran": true,
+      "box": "Vinck - Spike Field Coherence; Spike-Field Coherence - Vinck"
+    },
+    {
+      "stage": "interaction",
+      "topic": "Laminar directed information",
+      "lead": "Akella",
+      "tools": "Python / Cython",
+      "years": [
+        2024
+      ],
+      "box": "Akella - Directed Information"
+    },
+    {
+      "stage": "interaction",
+      "topic": "Directional routing (stMUA)",
+      "lead": "Banaie Boroujeni",
+      "tools": "MATLAB",
+      "years": [
+        2024,
+        2025
+      ],
+      "box": "Banaie Boroujeni - Directional Routing; Functonal Cell Classes - Boroujeni"
+    },
+    {
+      "stage": "interaction",
+      "topic": "Causal inference (do-calc)",
+      "lead": "Maier",
+      "tools": "handout",
+      "years": [
+        2025
+      ],
+      "box": "Do-Calculus - Maier"
+    },
+    {
+      "stage": "model",
+      "topic": "Biophysical modeling (GSDR)",
+      "lead": "Nejat",
+      "tools": "JAX notebooks",
+      "years": [
+        2026
+      ],
+      "box": "comp-biophysics-agsdr"
+    }
+  ]
+}
